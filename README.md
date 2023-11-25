@@ -12,6 +12,6 @@ I'm a quick learner, always trying to improve. I've developed skills in web deve
 
 I'm passionate about chess and continuously working to enhance my skills in the game. ♟️
 
-## License
+### License
 
 This project is licensed under the [GPL version 3](https://www.gnu.org/licenses/gpl-3.0-standalone.html) - see the [LICENSE](LICENSE.md) file for details.
