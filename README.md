@@ -2,7 +2,7 @@
 
 This repository hosts the code for my personal website.
 
-[Jehangeer | R/Shiny Developer & Junior Data Scientist](https://www.aswanijehangeer.com)
+[Jehangeer | R/Shiny Developer & Junior Data Scientist](https://aswanijehangeer.github.io/)
 
 A recent statistics graduate with over two years of experience as a freelance R Shiny developer.
 
