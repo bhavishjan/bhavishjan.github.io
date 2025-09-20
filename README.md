@@ -11,6 +11,9 @@ Right now I’m still learning the basics: programming, Git/GitHub, Linux, and h
 
 If you’re here, feel free to explore. If something doesn’t work, just assume it’s a “feature.
 
+### Credit
+This website templete is originally build by Jehangeer Aswani (https://github.com/aswanijehangeer).
+
 ### License
 
 This project is licensed under the [GPL version 3](https://www.gnu.org/licenses/gpl-3.0-standalone.html) - see the [LICENSE](LICENSE.md) file for details.
