@@ -15,43 +15,41 @@
     <!-- CSS  -->
     <link rel="stylesheet" href="assets/css/styles.css" />
     <link rel="stylesheet" href="assets/css/media-queries.css">
+    <!-- EmailJS SDK -->
+<script type="text/javascript" src="https://cdn.emailjs.com/sdk/3.2.0/email.min.js"></script>
+<script type="text/javascript">
+  (function(){
+    emailjs.init("hdc2fXlltEmzG8mEi"); // Your Public Key
+  })();
+</script>
+
+<!-- Contact form script -->
+<script>
+const form = document.getElementById("contact-form");
+
+form.addEventListener("submit", function(event) {
+    event.preventDefault(); // Stop page reload
+
+    emailjs.sendForm('service_pt1510s', 'template_fl3sgo9', this)
+        .then(() => {
+            document.getElementById("contact-message").innerText = "✅ Message sent successfully!";
+            form.reset();
+        }, (error) => {
+            document.getElementById("contact-message").innerText = "❌ Oops! Something went wrong.";
+            console.error(error);
+        });
+});
+</script>
+
+    <script type="text/javascript" src="https://cdn.emailjs.com/sdk/3.2.0/email.min.js"></script>
+<script type="text/javascript">
+  (function(){
+    emailjs.init("YOUR_PUBLIC_KEY"); // replace with your public key from EmailJS
+  })();
+</script>
+
     <meta name="description" content="I am a Computer Science Undergrad at FAST NUCES Islamabad. Explore my portfolio on my personal website." />
     <title>Bhavish Jan | CS Undergrad</title>
-  </head>
-  <body>
-    <!-- HEADER  -->
-    <header class="header" id="header">
-      <nav class="nav container">
-        <a href="#" class="nav__logo"><img src="assets/img/logo.png" alt=""></a>
-        <div class="nav__menu" id="nav-menu">
-          <ul class="nav__list grid">
-            <li class="nav__item">
-              <a href="#about" class="nav__link">
-                <i class="ri-home-5-line"></i> INTRO
-              </a>
-            </li>
-            <li class="nav__item">
-              <a href="#contact" class="nav__link">
-                <i class="ri-chat-3-line"></i> CONTACT
-              </a>
-            </li>
-          </ul>
-          <!-- Close button  -->
-          <div class="nav__close" id="nav-close">
-            <i class="ri-close-line"></i>
-          </div>
-        </div>
-        <div class="nav__buttons">
-          <!-- Theme change button  -->
-          <!-- <i class="ri-moon-line change-theme" id="theme-button"></i> -->
-
-          <!-- Toggle button  -->
-          <div class="nav__toggle" id="nav-toggle">
-            <i class="ri-menu-4-line"></i>
-          </div>
-        </div>
-      </nav>
-    </header>
 
     <!-- MAIN -->
     <main class="main">
@@ -71,14 +69,7 @@
           <p class="section__text__p2">
             CS Undergrad @ FAST NUCES Islamabad
           </p>
-          <div class="btn-container">
-            <button
-              class="btn btn-color-1"
-              onclick="location.href='./#contact'"
-            >
-              Contact Info
-            </button>
-          </div>
+        
           <div id="socials-container">
             <a
             href="https://www.linkedin.com/in/bhavishjan/"
