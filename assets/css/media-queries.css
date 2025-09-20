@@ -91,3 +91,14 @@
     grid-template-columns: 1fr;
   }
 }
+/* Mobile fix for Contact section */
+@media screen and (max-width: 768px) {
+  .contact__container {
+    grid-template-columns: 1fr;  /* Stack items vertically */
+    row-gap: 2rem;               /* Add spacing between contact info & form */
+  }
+
+  .contact__content {
+    width: 100%;                 /* Make each section full-width */
+  }
+}
