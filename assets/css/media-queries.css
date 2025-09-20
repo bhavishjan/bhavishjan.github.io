@@ -91,14 +91,21 @@
     grid-template-columns: 1fr;
   }
 }
-/* Mobile fix for Contact section */
+/* Mobile responsive fix for Contact Section */
 @media screen and (max-width: 768px) {
   .contact__container {
-    grid-template-columns: 1fr;  /* Stack items vertically */
-    row-gap: 2rem;               /* Add spacing between contact info & form */
+    display: flex;
+    flex-direction: column;  /* Stack content vertically */
+    gap: 2rem;               /* Add space between sections */
   }
 
   .contact__content {
-    width: 100%;                 /* Make each section full-width */
+    width: 100%;             /* Full width on mobile */
+  }
+
+  .contact__form-div,
+  .contact__form-input,
+  .contact__form-area textarea {
+    width: 100%;             /* Ensure inputs stretch fully */
   }
 }
