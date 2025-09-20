@@ -91,20 +91,29 @@
     grid-template-columns: 1fr;
   }
 }
-@media screen and (min-width: 767px) {
-  .skills__container,
-  .qualification__container,
-  .services__container,
+/* Contact section fix for small screens */
+@media screen and (max-width: 767px) {
   .contact__container {
-    grid-template-columns: repeat(2, 1fr); /* changed from max-content */
+    display: flex !important;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    gap: 2rem;
   }
 
-  .contact__container {
-    align-items: start;   /* keeps both aligned from the top */
-    column-gap: 4rem;     /* adjust spacing */
+  .contact__content {
+    width: 100%;
+    height: auto;
   }
 
   .contact__form {
-    width: 100%;          /* let the form take full column width */
+    width: 100%;
+  }
+
+  .contact__form-div,
+  .contact__form-input,
+  .contact__form-area textarea {
+    width: 100%;
+    box-sizing: border-box;
   }
 }
