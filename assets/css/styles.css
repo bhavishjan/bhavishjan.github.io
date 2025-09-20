@@ -1206,3 +1206,7 @@ img {
     margin-top: 5rem;
   }
 }
+/* Prevent footer overlap with fixed nav */
+body {
+  padding-bottom: 6rem; /* Adjust based on nav/footer height */
+}
