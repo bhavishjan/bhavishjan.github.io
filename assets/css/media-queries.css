@@ -91,21 +91,24 @@
     grid-template-columns: 1fr;
   }
 }
-/* Mobile responsive fix for Contact Section */
 @media screen and (max-width: 768px) {
   .contact__container {
     display: flex;
-    flex-direction: column;  /* Stack content vertically */
-    gap: 2rem;               /* Add space between sections */
+    flex-direction: column;  
+    gap: 2rem;               
+    width: 100%;
+    height: auto;            /* make sure container grows */
   }
 
   .contact__content {
-    width: 100%;             /* Full width on mobile */
+    width: 100%;             
+    height: auto;            /* allow content to expand */
   }
 
   .contact__form-div,
   .contact__form-input,
   .contact__form-area textarea {
-    width: 100%;             /* Ensure inputs stretch fully */
+    width: 100%;             
+    box-sizing: border-box;  /* prevent weird shrink/stretch */
   }
 }
