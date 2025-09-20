@@ -2,15 +2,14 @@
 
 This repository hosts the code for my personal website.
 
-[Jehangeer | R/Shiny Developer & Junior Data Scientist](https://aswanijehangeer.github.io/)
+[Bhavish Jan | CS Undergrad @ FAST NUCES Islamabad](https://bhavishjan.github.io/)
 
-A recent statistics graduate with over two years of experience as a freelance R Shiny developer.
+I’m Bhavish Jan, a first-year CS student at FAST NUCES Islamabad.
+This repo is for my personal website, where I’ll eventually share projects, notes, and maybe even the bugs I can’t fix.
 
-My job consists of helping researchers and companies to analyze and visualize their datasets. I am skilled for most data-science steps: data pre-processing, application of statistical methods, data visualization, shiny dashboards, and machine learning.
+Right now I’m still learning the basics: programming, Git/GitHub, Linux, and how not to break my laptop every other day.
 
-I'm a quick learner, always trying to improve. I've developed skills in web development and am learning Rust. 🔥
-
-I'm passionate about chess and continuously working to enhance my skills in the game. ♟️
+If you’re here, feel free to explore. If something doesn’t work, just assume it’s a “feature.
 
 ### License
 
