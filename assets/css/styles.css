@@ -1206,7 +1206,10 @@ img {
     margin-top: 5rem;
   }
 }
-/* Prevent footer overlap with fixed nav */
+:root {
+  --nav-height: 80px; /* adjust to your .nav height */
+}
+
 body {
-  padding-bottom: 6rem; /* Adjust based on nav/footer height */
+  padding-bottom: var(--nav-height);
 }
