@@ -9,7 +9,7 @@ This repo is for my personal website, where I’ll eventually share projects, no
 
 Right now I’m still learning the basics: programming, Git/GitHub, Linux, and how not to break my laptop every other day.
 
-If you’re here, feel free to explore. If something doesn’t work, just assume it’s a “feature.
+If you’re here, feel free to explore. If something doesn’t work, just assume it’s a “feature".
 
 ### Credit
 This website templete is originally build by Jehangeer Aswani (https://github.com/aswanijehangeer).
