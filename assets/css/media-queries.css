@@ -91,24 +91,20 @@
     grid-template-columns: 1fr;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 767px) {
+  .skills__container,
+  .qualification__container,
+  .services__container,
   .contact__container {
-    display: flex;
-    flex-direction: column;  
-    gap: 2rem;               
-    width: 100%;
-    height: auto;            /* make sure container grows */
+    grid-template-columns: repeat(2, 1fr); /* changed from max-content */
   }
 
-  .contact__content {
-    width: 100%;             
-    height: auto;            /* allow content to expand */
+  .contact__container {
+    align-items: start;   /* keeps both aligned from the top */
+    column-gap: 4rem;     /* adjust spacing */
   }
 
-  .contact__form-div,
-  .contact__form-input,
-  .contact__form-area textarea {
-    width: 100%;             
-    box-sizing: border-box;  /* prevent weird shrink/stretch */
+  .contact__form {
+    width: 100%;          /* let the form take full column width */
   }
 }
