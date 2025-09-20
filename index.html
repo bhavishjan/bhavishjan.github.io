@@ -15,42 +15,12 @@
     <!-- CSS  -->
     <link rel="stylesheet" href="assets/css/styles.css" />
     <link rel="stylesheet" href="assets/css/media-queries.css">
-    <!-- EmailJS SDK -->
-<script type="text/javascript" src="https://cdn.emailjs.com/sdk/3.2.0/email.min.js"></script>
-<script type="text/javascript">
-  (function(){
-    emailjs.init("hdc2fXlltEmzG8mEi"); // Your Public Key
-  })();
-</script>
-
-<!-- Contact form script -->
-<script>
-const form = document.getElementById("contact-form");
-
-form.addEventListener("submit", function(event) {
-    event.preventDefault(); // Stop page reload
-
-    emailjs.sendForm('service_pt1510s', 'template_fl3sgo9', this)
-        .then(() => {
-            document.getElementById("contact-message").innerText = "✅ Message sent successfully!";
-            form.reset();
-        }, (error) => {
-            document.getElementById("contact-message").innerText = "❌ Oops! Something went wrong.";
-            console.error(error);
-        });
-});
-</script>
-
-    <script type="text/javascript" src="https://cdn.emailjs.com/sdk/3.2.0/email.min.js"></script>
-<script type="text/javascript">
-  (function(){
-    emailjs.init("YOUR_PUBLIC_KEY"); // replace with your public key from EmailJS
-  })();
-</script>
+ 
 
     <meta name="description" content="I am a Computer Science Undergrad at FAST NUCES Islamabad. Explore my portfolio on my personal website." />
     <title>Bhavish Jan | CS Undergrad</title>
-
+  </head>
+  <body>
     <!-- MAIN -->
     <main class="main">
       <!-- HOME -->
@@ -263,5 +233,36 @@ If something doesn’t work, just assume it’s a “feature".
 
     <!-- MAIN JS -->
     <script src="assets/js/main.js"></script>
+    <!-- EMAILJS: include once and then init + handler -->
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+<script>
+  // init with your Public Key
+  (function(){
+    emailjs.init("hdc2fXlltEmzG8mEi");
+  })();
+
+  // wait until DOM is ready, then attach handler
+  document.addEventListener('DOMContentLoaded', function () {
+    const form = document.getElementById("contact-form");
+    if (!form) return console.warn('contact-form not found');
+
+    form.addEventListener("submit", function(event) {
+      event.preventDefault();
+
+      // show a temporary message while sending (optional)
+      const messageEl = document.getElementById("contact-message");
+      if (messageEl) messageEl.innerText = 'Sending...';
+
+      emailjs.sendForm('service_pt1510s', 'template_fl3sgo9', this)
+        .then(function() {
+          if (messageEl) messageEl.innerText = "✅ Message sent successfully!";
+          form.reset();
+        }, function(error) {
+          if (messageEl) messageEl.innerText = "❌ Oops! Something went wrong.";
+          console.error('EmailJS error:', error);
+        });
+    });
+  });
+</script>
   </body>
 </html>
