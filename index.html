@@ -222,43 +222,45 @@ If something doesn’t work, just assume it’s a “feature".
 
     <!-- SWIPER JS -->
     <script src="assets/js/swiper-bundle.min.js"></script>
-    
+
     ></script>
     <!-- Particle JS -->
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 
     <!-- MAIN JS -->
     <script src="assets/js/main.js"></script>
-    <!-- EMAILJS: include once and then init + handler -->
-<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 <script>
-  // init with your Public Key
   (function(){
-    emailjs.init("hdc2fXlltEmzG8mEi");
+    emailjs.init("hdc2fXlltEmzG8mEi"); // your public key
   })();
 
-  // wait until DOM is ready, then attach handler
   document.addEventListener('DOMContentLoaded', function () {
     const form = document.getElementById("contact-form");
-    if (!form) return console.warn('contact-form not found');
+    const messageEl = document.getElementById("contact-message");
 
     form.addEventListener("submit", function(event) {
       event.preventDefault();
 
-      // show a temporary message while sending (optional)
-      const messageEl = document.getElementById("contact-message");
-      if (messageEl) messageEl.innerText = 'Sending...';
+      if (messageEl) messageEl.innerText = "Sending...";
 
-      emailjs.sendForm('service_pt1510s', 'template_fl3sgo9', this)
-        .then(function() {
+      // Debugging: log field values
+      console.log("Name:", form.user_name.value);
+      console.log("Email:", form.user_email.value);
+      console.log("Message:", form.user_message.value);
+
+      emailjs.sendForm('service_pt1510s', 'template_fl3sgo9', form)
+        .then(() => {
           if (messageEl) messageEl.innerText = "✅ Message sent successfully!";
           form.reset();
-        }, function(error) {
+        })
+        .catch((error) => {
           if (messageEl) messageEl.innerText = "❌ Oops! Something went wrong.";
-          console.error('EmailJS error:', error);
+          console.error("EmailJS error:", error);
         });
     });
   });
 </script>
+
   </body>
 </html>
