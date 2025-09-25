@@ -19,6 +19,10 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
+    <!-- Add in <head> -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+
     <!-- Custom Styles -->
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
@@ -69,7 +73,6 @@ body::-webkit-scrollbar {
     </style>
 </head>
 <body class="bg-slate-50 text-slate-700">
-    <main>
         <!-- Home/Profile Section -->
 <section id="home" class="relative h-screen flex items-center justify-center text-center overflow-hidden">
     <div id="particles-js"></div>
@@ -80,201 +83,171 @@ body::-webkit-scrollbar {
         onerror="this.onerror=null;this.src='https://placehold.co/150x150/e0e7ff/4f46e5?text=Bhavish';">
 
         
-        <h1 class="text-4xl md:text-6xl font-bold text-slate-800 mb-2">Bhavish Jan</h1>
+        <h1 class="text-4xl md:text-6xl font-bold text-slate-800 mb-2" style="font-family: sans-serif;">Bhavish Jan</h1>
         <br>
         <p class="text-lg md:text-xl text-indigo-600 font-semibold mb-6">CS Undergrad @ FAST NUCES Islamabad</p>
 
-        <!-- Buttons -->
-        <div class="flex justify-center space-x-4">
-            <!-- LinkedIn -->
-            <a href="https://www.linkedin.com/in/bhavishjan" target="_blank"
-            class="px-6 py-2 rounded-lg shadow-md 
-                    bg-indigo-600 text-white border-2 border-indigo-600
-                    transition duration-300 ease-in-out
-                    hover:bg-transparent hover:text-indigo-600">
-                LinkedIn
-            </a>
+        <div id="socials-container" class="flex justify-center space-x-6">
+  <a
+    href="https://www.linkedin.com/in/bhavishjan/"
+    target="_blank"
+    class="text-indigo-600 text-4xl hover:text-indigo-800 transition-colors"
+  >
+    <i class="ri-linkedin-box-line"></i>
+  </a>
+  <a
+    href="https://github.com/bhavishjan"
+    target="_blank"
+    class="text-indigo-600 text-4xl hover:text-indigo-800 transition-colors"
+  >
+    <i class="ri-github-line"></i>
+  </a>
+  <a
+    href="https://www.instagram.com/bhavish.jan/"
+    target="_blank"
+    class="text-indigo-600 text-4xl hover:text-indigo-800 transition-colors"
+  >
+    <i class="ri-instagram-line"></i>
+  </a>
+</div>
 
-            <!-- GitHub -->
-            <a href="https://www.github.com/bhavishjan" target="_blank"
-            class="px-6 py-2 rounded-lg shadow-md
-                    bg-transparent text-indigo-600 border-2 border-indigo-600
-                    transition duration-300 ease-in-out
-                    hover:bg-indigo-600 hover:text-white">
-                GitHub
-            </a>
-        </div>
 
     </div>
 </section>
 
 
         <!-- About Section -->
-        <section id="about" class="py-20 bg-white">
+        <section id="about" class="py-20">
             <div class="container mx-auto text-center">
                 <h2 class="text-4xl font-bold text-slate-800 mb-2 section-title">About</h2>
                 <br>
-                <div class="flex flex-col md:flex-row items-center justify-center gap-12 text-left">
-                    <div class="md:w-1/3 about-image">
-                        <img src="assets/img/about.jpg" alt="About Bhavish Jan" class="rounded-lg shadow-xl h-96 mx-auto" onerror="this.onerror=null;this.src='https://placehold.co/400x400/e0e7ff/4f46e5?text=About+Me';">
-                    </div>
-                    <div class="md:w-1/2 about-description">
-                       This is my personal website, where I’ll eventually share projects and maybe even the bugs I can’t fix.
-<br><br>
-Right now I’m still learning the basics: programming, Git/GitHub, Linux, and how not to break my laptop every other day.
-<br><br>
-If something doesn’t work, just assume it’s a “feature".
-<br><br>
-I will add more content here as I learn and grow. Stay tuned!
-                    </div>
+            <div class="max-w-4xl mx-auto bg-slate-50 p-8 rounded-lg shadow-lg flex items-center gap-8 education-card mb-8">
+            <div class="text-left">
+                <p class="text-slate-500 mt-1">
+                    I’m Bhavish and I love computers. Someday, I’ll showcase my cool projects here and maybe even some mistakes I’ve made along the way.
+                    <br><br>
+                    Currently, I’m learning the basics of C++, hoping to master it one day. 
+                    <br><br>
+                    I use Git and GitHub to save my work and I try my best not to break my laptop every other day.
+                    <br><br>
+                    If something is not working here, assume that it is a "FEATURE"
+                    <br><br>
+                    I’ll keep adding new stuff as I learn more and improve. Check back later, who knows what I’ll create or mess up next!
+                </p>
+            </div>
+            </div>
+
                 </div>
             </div>
         <!-- Education Section -->
-        <section id="education" class="py-20 bg-white">
-            <div class="container mx-auto px-6 text-center">
-                <h2 class="text-3xl font-bold text-slate-800 mb-2 section-title">Education</h2>
-                
-                <div class="max-w-2xl mx-auto bg-slate-50 p-8 rounded-lg shadow-lg flex items-center gap-8 education-card">
-    <img src="assets/img/fast.png" alt="FAST Logo" 
-     class="w-[120px] h-[120px] rounded-full shadow-lg"
-     onerror="this.onerror=null;this.src='https://placehold.co/100x100/e0e7ff/4f46e5?text=FAST';">
-
-    <div class="text-left">
-        <h3 class="text-2xl font-bold text-slate-800">BS Computer Science</h3>
-        <p class="text-lg text-indigo-600 font-medium">National University of Computer & Emerging Sciences, Islamabad</p>
-        <p class="text-slate-500 mt-1">Aug 2025 - Present</p>
-    </div>
-</div>
-
-                <br>
-                <div class="max-w-2xl mx-auto bg-slate-50 p-8 rounded-lg shadow-lg flex items-center gap-8 education-card">
-                    <img src="assets/img/akhuwat.png" alt="FAST Logo" 
-     class="w-[120px] h-[120px] rounded-full "
-     onerror="this.onerror=null;this.src='https://placehold.co/100x100/e0e7ff/4f46e5?text=ACK';">
-                    <div class="text-left">
-                        <h3 class="text-2xl font-bold text-slate-800">Intermediate (Computer Science)</h3>
-                        <p class="text-lg text-indigo-600 font-medium">Akhuwat College University Kasur</p>
-                        <p class="text-slate-500 mt-1">Aug 2023 - Aug 2025</p>
-                    </div>
-                </div>
-                <br>
-                <div class="max-w-2xl mx-auto bg-slate-50 p-8 rounded-lg shadow-lg flex items-center gap-8 education-card">
-                     <img src="assets/img/ncmithi.jpg" alt="FAST Logo" 
-     class="w-[120px] h-[120px] rounded-full"
-     onerror="this.onerror=null;this.src='https://placehold.co/100x100/e0e7ff/4f46e5?text=NC Mithi';">
-                    <div class="text-left">
-                        <h3 class="text-2xl font-bold text-slate-800">Matric (Computer Science)</h3>
-                        <p class="text-lg text-indigo-600 font-medium">Amar Jagdish Malani Government High School North Colony Mithi</p>
-                        <p class="text-slate-500 mt-1">Aug 2018 - Aug 2023</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-                </section>
-        
-        <!-- Skills Section -->
-        <section id="skills" class="py-20">
-            <div class="container mx-auto px-6 text-center">
-                <h2 class="text-3xl font-bold text-slate-800 mb-2 section-title">Skills</h2>
-                <br>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-4xl mx-auto">
-        <!-- Languages -->
-        <div class="bg-white p-6 rounded-lg shadow-md skills-card">
-            <i class="ri-code-s-slash-line text-4xl text-indigo-600 mb-4 inline-block"></i>
-            <h3 class="text-xl font-semibold mb-3">Languages</h3>
-            <p class="text-slate-500">C, C++, Python (Basic)</p>
-        </div>
-
-        <!-- Web Development -->
-        <div class="bg-white p-6 rounded-lg shadow-md skills-card">
-            <i class="ri-html5-line text-4xl text-indigo-600 mb-4 inline-block"></i>
-            <h3 class="text-xl font-semibold mb-3">Web Development</h3>
-            <p class="text-slate-500">HTML, CSS, JS</p>
-        </div>
-
-        <!-- Tools -->
-        <div class="bg-white p-6 rounded-lg shadow-md skills-card">
-            <i class="ri-tools-line text-4xl text-indigo-600 mb-4 inline-block"></i>
-            <h3 class="text-xl font-semibold mb-3">Tools</h3>
-            <p class="text-slate-500">Git, GitHub, Linux</p>
-        </div>
-
-        <!-- Hobbies -->
-        <div class="bg-white p-6 rounded-lg shadow-md skills-card">
-            <i class="ri-music-2-line text-4xl text-indigo-600 mb-4 inline-block"></i>
-            <h3 class="text-xl font-semibold mb-3">Hobbies</h3>
-            <p class="text-slate-500">Chess + Music</p>
-        </div>
-
-                </div>
-            </div>
-        </section>
-        <!-- Contact Section -->
-        <section id="contact" class="py-20 bg-white">
-            <div class="container mx-auto px-6 text-center">
-                <h2 class="text-3xl font-bold text-slate-800 mb-2 section-title">Contact Me</h2>
-                <p class="text-md text-slate-500 mb-12">Get in Touch</p>
-                
-                <div class="flex flex-col md:flex-row justify-center gap-16">
-                    <!-- Contact Details -->
-                    <div class="text-left md:w-1/3 contact-info">
-                        <h3 class="text-xl font-semibold text-slate-800 mb-6">Talk to Me</h3>
-                        <div class="space-y-6">
-                            <div class="flex items-start gap-4">
-                                <i class="ri-mail-send-line text-2xl text-indigo-600 mt-1"></i>
-                                <div>
-                                    <h4 class="font-semibold">Email</h4>
-                                    <p class="text-slate-500">bhavishjanparhyar@gmail.com</p>
-                                </div>
-                            </div>
-                            <div class="flex items-start gap-4">
-                                <i class="ri-whatsapp-line text-2xl text-indigo-600 mt-1"></i>
-                                <div>
-                                    <h4 class="font-semibold">WhatsApp</h4>
-                                    <a href="#" target="_blank" class="text-slate-500 hover:text-indigo-600 transition-colors">+92 321 1380328</a>
-                                </div>
-                            </div>
-                            <div class="flex items-start gap-4">
-                                <i class="ri-linkedin-box-line text-2xl text-indigo-600 mt-1"></i>
-                                <div>
-                                    <h4 class="font-semibold">LinkedIn</h4>
-                                    <a href="www.linkedin.com/in/bhavishjan" target="_blank" class="text-slate-500 hover:text-indigo-600 transition-colors">Bhavish Jan</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    
-    <!-- Footer -->
-    <footer class="bg-indigo-900 text-indigo-200 py-12">
+        <section id="education" class="py-20">
         <div class="container mx-auto px-6 text-center">
-            <h3 class="text-2xl font-bold text-white">Bhavish Jan</h3>
-            <p class="text-indigo-300 mb-6">CS Undergrad @ FAST NUCES Islamabad</p>
-            <div class="flex justify-center space-x-6 mb-8">
-               <a href="https://www.linkedin.com/in/bhavishjan" target="_blank" aria-label="LinkedIn" class="hover:text-white transition-colors">
-  <i class="ri-linkedin-box-fill text-2xl"></i>
-</a>
+            <h2 class="text-3xl font-bold text-slate-800 mb-2 section-title">Education</h2>
 
-<a href="https://github.com/bhavishjan" target="_blank" aria-label="GitHub" class="hover:text-white transition-colors">
-  <i class="ri-github-fill text-2xl"></i>
-</a>
-
-<a href="https://www.instagram.com/bhavish.jan" target="_blank" aria-label="Instagram" class="hover:text-white transition-colors">
-  <i class="ri-instagram-fill text-2xl"></i>
-</a>
-
-
+            <!-- BS CS -->
+            <div class="max-w-4xl mx-auto bg-slate-50 p-8 rounded-lg shadow-lg flex items-center gap-8 education-card mb-8">
+            <img src="assets/img/fast.png" alt="FAST Logo"
+                class="w-[120px] h-[120px] rounded-full shadow-lg"
+                onerror="this.onerror=null;this.src='https://placehold.co/100x100/e0e7ff/4f46e5?text=FAST';">
+            <div class="text-left">
+                <h3 class="text-2xl font-bold text-slate-800">Bachelor's - Computer Science</h3>
+                <p class="text-lg text-indigo-600 font-medium">National University of Computer & Emerging Sciences, Islamabad</p>
+                <p class="text-slate-500 mt-1">Aug 2025 - Present</p>
             </div>
-            <p class="text-sm text-indigo-400">&copy; 2025 Bhavish Jan. All Rights Reserved.</p>
-        </div>
-    </footer>
+            </div>
 
-    <!-- Scroll-up Button -->
-    <a href="#" id="scroll-up" class="fixed right-6 bottom-6 bg-indigo-600 text-white p-3 rounded-full shadow-lg hover:bg-indigo-700 transition-all duration-300 opacity-0 pointer-events-none">
-        <i class="ri-arrow-up-s-line text-xl"></i>
-    </a>
-    
+            <!-- Intermediate -->
+            <div class="max-w-4xl mx-auto bg-slate-50 p-8 rounded-lg shadow-lg flex items-center gap-8 education-card mb-8">
+            <img src="assets/img/akhuwat.png" alt="ACK Logo"
+                class="w-[120px] h-[120px] rounded-full"
+                onerror="this.onerror=null;this.src='https://placehold.co/100x100/e0e7ff/4f46e5?text=ACK';">
+            <div class="text-left">
+                <h3 class="text-2xl font-bold text-slate-800">Intermediate - Computer Science</h3>
+                <p class="text-lg text-indigo-600 font-medium">Akhuwat College University Kasur</p>
+                <p class="text-slate-500 mt-1">Aug 2023 - Aug 2025</p>
+            </div>
+            </div>
+
+            <!-- Matric -->
+            <div class="max-w-4xl mx-auto bg-slate-50 p-8 rounded-lg shadow-lg flex items-center gap-8 education-card">
+            <img src="assets/img/ncmithi.jpg" alt="NC Mithi Logo"
+                class="w-[120px] h-[120px] rounded-full"
+                onerror="this.onerror=null;this.src='https://placehold.co/100x100/e0e7ff/4f46e5?text=NC Mithi';">
+            <div class="text-left">
+                <h3 class="text-2xl font-bold text-slate-800">Matriculation - Computer Science</h3>
+                <p class="text-lg text-indigo-600 font-medium">Amar Jagdish Malani Government High School North Colony Mithi</p>
+                <p class="text-slate-500 mt-1">Aug 2018 - Aug 2023</p>
+            </div>
+            </div>
+
+        </div>
+        </section>
+<!-- Skills Section -->
+<section id="skills" class="py-20">
+    <div class="container mx-auto px-6 text-center">
+        <h2 class="text-3xl font-bold text-slate-800 mb-2 section-title">Skills</h2>
+        <br>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            <div class="bg-slate-50 p-6 rounded-lg shadow-md skills-card transition-all duration-300">
+                <i class="ri-code-s-slash-line text-4xl text-indigo-600 mb-4 inline-block"></i>
+                <h3 class="text-xl font-semibold mb-3">Languages</h3>
+                <p class="text-slate-500">C, C++, Python (Basic)</p>
+            </div>
+            <div class="bg-slate-50 p-6 rounded-lg shadow-md skills-card transition-all duration-300">
+                <i class="ri-html5-line text-4xl text-indigo-600 mb-4 inline-block"></i>
+                <h3 class="text-xl font-semibold mb-3">Web Development</h3>
+                <p class="text-slate-500">HTML, CSS, JS</p>
+            </div>
+            <div class="bg-slate-50 p-6 rounded-lg shadow-md skills-card transition-all duration-300">
+                <i class="ri-tools-line text-4xl text-indigo-600 mb-4 inline-block"></i>
+                <h3 class="text-xl font-semibold mb-3">Tools</h3>
+                <p class="text-slate-500">Git, GitHub, Linux</p>
+            </div>
+            <div class="bg-slate-50 p-6 rounded-lg shadow-md skills-card transition-all duration-300">
+                <i class="ri-music-2-line text-4xl text-indigo-600 mb-4 inline-block"></i>
+                <h3 class="text-xl font-semibold mb-3">Hobbies</h3>
+                <p class="text-slate-500">Chess + Music</p>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="contact" class="pt-16 pb-2 bg-slate-50">
+    <div class="container mx-auto px-6 text-center">
+        <h2 class="text-3xl font-bold text-slate-800 mb-6 section-title">Contact Me</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            <a href="mailto:bhavishjanparhyar@gmail.com" class="contact-card bg-slate-50 p-6 rounded-lg shadow-md flex flex-col items-center transition-all duration-300">
+                <i class="ri-mail-send-line text-4xl text-indigo-600 mb-4"></i>
+                <h3 class="text-xl font-semibold mb-2">Email</h3>
+            </a>
+            <a href="https://wa.me/923211380328" target="_blank" class="contact-card bg-slate-50 p-6 rounded-lg shadow-md flex flex-col items-center transition-all duration-300">
+                <i class="ri-whatsapp-line text-4xl text-indigo-600 mb-4"></i>
+                <h3 class="text-xl font-semibold mb-2">WhatsApp</h3>
+            </a>
+            <a href="https://www.linkedin.com/in/bhavishjan" target="_blank" class="contact-card bg-slate-50 p-6 rounded-lg shadow-md flex flex-col items-center transition-all duration-300">
+                <i class="ri-linkedin-box-line text-4xl text-indigo-600 mb-4"></i>
+                <h3 class="text-xl font-semibold mb-2">LinkedIn</h3>
+            </a>
+            <a href="https://github.com/bhavishjan" target="_blank" class="contact-card bg-slate-50 p-6 rounded-lg shadow-md flex flex-col items-center transition-all duration-300">
+                <i class="ri-github-fill text-4xl text-indigo-600 mb-4"></i>
+                <h3 class="text-xl font-semibold mb-2">GitHub</h3>
+            </a>
+            <a href="https://www.instagram.com/bhavish.jan" target="_blank" class="contact-card bg-slate-50 p-6 rounded-lg shadow-md flex flex-col items-center transition-all duration-300">
+                <i class="ri-instagram-fill text-4xl text-indigo-600 mb-4"></i>
+                <h3 class="text-xl font-semibold mb-2">Instagram</h3>
+            </a>
+            <a href="https://www.facebook.com/bhavishjanparhyar" target="_blank" class="contact-card bg-slate-50 p-6 rounded-lg shadow-md flex flex-col items-center transition-all duration-300">
+                <i class="ri-facebook-fill text-4xl text-indigo-600 mb-4"></i>
+                <h3 class="text-xl font-semibold mb-2">Facebook</h3>
+            </a>
+        </div>
+        <br><br><br>
+        <p class="text-sm text-slate-400 mt-2 mb-0">&copy; 2025 Bhavish Jan. All Rights Reserved.</p>
+    </div>
+</section>
+
+
+
+
     <!-- External Libraries -->
     <!-- Particles.js for animated background -->
     <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
@@ -286,6 +259,7 @@ I will add more content here as I learn and grow. Stay tuned!
     <script>
         document.addEventListener('DOMContentLoaded', () => {
 
+            
             // --- PARTICLES.JS INITIALIZATION ---
             particlesJS('particles-js', {
                 "particles": {
@@ -299,7 +273,7 @@ I will add more content here as I learn and grow. Stay tuned!
                 },
                 "interactivity": {
                     "detect_on": "canvas",
-                    "events": { "onhover": { "enable": false, "mode": "repulse" }, "onclick": { "enable": false, "mode": "push" }, "resize": false },
+                    "events": { "onhover": { "enable": false, "mode": "repulse" }, "onclick": { "enable": false, "mode": "push" }, "resize": false  },
                     "modes": { "grab": { "distance": 400, "line_linked": { "opacity": 1 } }, "bubble": { "distance": 400, "size": 40, "duration": 2, "opacity": 8, "speed": 3 }, "repulse": { "distance": 200, "duration": 0.4 }, "push": { "particles_nb": 4 }, "remove": { "particles_nb": 2 } }
                 },
                 "retina_detect": true
@@ -331,6 +305,26 @@ I will add more content here as I learn and grow. Stay tuned!
             
             
         });
+        
+document.addEventListener('DOMContentLoaded', () => {
+    const sr = ScrollReveal({
+        origin: 'bottom',
+        distance: '60px',
+        duration: 1000,
+        delay: 100,
+        reset: false
+    });
+
+    // Existing Skills animation
+    sr.reveal('.skills-card', { interval: 100 });
+
+    // Add Contact cards animation
+    sr.reveal('.contact-card', { interval: 100 });
+});
+window.onbeforeunload = function () {
+    window.scrollTo(0, 0);
+  };
+
     </script>
     
 </body>
