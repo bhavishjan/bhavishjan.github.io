@@ -1,359 +1,422 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Website Title -->
-    <title>Bhavish Jan | CS @ FAST-NUCES</title>
-    <!-- SEO Meta Description -->
-    <meta name="description" content="I am a Computer Science Undergrad at FAST NUCES Islamabad. Explore my portfolio on my personal website.">
-    <!-- Favicon -->
-    <link rel="icon" href="assets/img/circle-logo.png" type="image/png">
-    
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- Remixicon for Icons -->
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bhavish Jan | CS @ FAST-NUCES</title>
+  <meta
+    name="description"
+    content="I am a Computer Science Undergrad at FAST NUCES Islamabad. Explore my portfolio on my personal website."
+  />
+  <link rel="icon" href="assets/img/circle-logo.png" type="image/png" />
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- Add in <head> -->
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <!-- Remixicon -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+    rel="stylesheet"
+  />
 
+  <!-- Font Awesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  />
 
-    <!-- Custom Styles -->
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+    rel="stylesheet"
+  />
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
 
-body {
-    font-family: 'Inter', sans-serif;
+    body {
+      font-family: "Inter", sans-serif;
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+    body::-webkit-scrollbar {
+      display: none;
+    }
 
-    /* Hide scrollbar but keep scrolling */
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;     /* Firefox */
-}
-body::-webkit-scrollbar {
-    display: none;             /* Chrome, Safari, Opera */
-}
+    #particles-js {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+    }
 
-        /* Style for the particles.js container */
-        #particles-js {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 0;
-}
+    .content-container {
+      position: relative;
+      z-index: 1;
+    }
 
-        
-        /* Ensure content is above the particles background */
-        .content-container {
-            position: relative;
-            z-index: 1;
-        }
-       html, body {
-    margin: 0;
-    padding: 0;
-    overflow: auto; /* allow scrolling */
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;     /* Firefox */
-}
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      overflow: auto;
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+      height: 100%;
+    }
+    html::-webkit-scrollbar,
+    body::-webkit-scrollbar {
+      display: none;
+    }
 
-/* Hide scrollbar but keep scrolling */
-html::-webkit-scrollbar, 
-body::-webkit-scrollbar {
-    display: none;  /* Chrome, Safari, Opera */
-}
+    body {
+      display: flex;
+      flex-direction: column;
+    }
 
-html, body {
-  height: 100%;
-}
-
-body {
-  display: flex;
-  flex-direction: column;
-}
-
-#contact {
-  margin-top: auto; /* pushes it to the bottom */
-}
-
-
-    </style>
+    #contact {
+      margin-top: auto;
+    }
+  </style>
 </head>
 <body class="bg-slate-50 text-slate-700">
-        <!-- Home/Profile Section -->
-<section id="home" class="relative h-screen flex items-center justify-center text-center overflow-hidden">
+  <!-- Home/Profile Section -->
+  <section
+    id="home"
+    class="relative h-screen flex items-center justify-center text-center overflow-hidden"
+  >
     <div id="particles-js"></div>
     <div class="content-container max-w-4xl mx-auto px-6">
-        <img src="assets/img/profile.png" 
-        alt="Bhavish Jan Profile Picture" 
-        class="w-60 h-60 rounded-full mx-auto mb-6 border-4 border-white shadow-lg" 
-        onerror="this.onerror=null;this.src='https://placehold.co/150x150/e0e7ff/4f46e5?text=Bhavish';">
+      <img
+        src="assets/img/profile.png"
+        alt="Bhavish Jan Profile Picture"
+        class="w-60 h-60 rounded-full mx-auto mb-6 border-4 border-white shadow-lg"
+        onerror="this.onerror=null;this.src='https://placehold.co/150x150/e0e7ff/4f46e5?text=Bhavish';"
+      />
 
-        
-        <h1 class="text-4xl md:text-6xl font-bold text-slate-800 mb-2" style="font-family: sans-serif;">Bhavish Jan</h1>
-        <br>
-        <p class="text-lg md:text-xl text-indigo-600 font-semibold mb-6">CS Undergrad @ FAST NUCES Islamabad</p>
+      <h1
+        class="text-4xl md:text-6xl font-bold text-slate-800 mb-2"
+        style="font-family: sans-serif"
+      >
+        Bhavish Jan
+      </h1>
+      <br />
+      <p class="text-lg md:text-xl text-indigo-600 font-semibold mb-6">
+        CS Undergrad @ FAST NUCES Islamabad
+      </p>
 
-        <div id="socials-container" class="flex justify-center space-x-6">
-  <!-- Email -->
-  <a
-    href="https://mail.google.com/mail/?view=cm&to=bhavishjanparhyar@gmail.com"
-    target="_blank"
-    class="text-indigo-600 text-4xl hover:text-indigo-800 transition-colors"
-  >
-    <i class="ri-mail-line"></i>
-  </a>
+      <div id="socials-container" class="flex justify-center space-x-6">
+        <!-- Email -->
+        <a
+          href="https://mail.google.com/mail/?view=cm&to=bhavishjanparhyar@gmail.com"
+          target="_blank"
+          class="text-indigo-600 text-4xl hover:text-indigo-800 transition-colors"
+        >
+          <i class="ri-mail-line"></i>
+        </a>
 
-  <!-- WhatsApp -->
-  <a
-    href="https://wa.me/923211380328"
-    target="_blank"
-    class="text-indigo-600 text-4xl hover:text-indigo-800 transition-colors"
-  >
-    <i class="ri-whatsapp-line"></i>
-  </a>
+        <!-- WhatsApp -->
+        <a
+          href="https://wa.me/923211380328"
+          target="_blank"
+          class="text-indigo-600 text-4xl hover:text-indigo-800 transition-colors"
+        >
+          <i class="ri-whatsapp-line"></i>
+        </a>
 
-  <!-- LinkedIn -->
-  <a
-    href="https://www.linkedin.com/in/bhavishjan/"
-    target="_blank"
-    class="text-indigo-600 text-4xl hover:text-indigo-800 transition-colors"
-  >
-    <i class="ri-linkedin-box-line"></i>
-  </a>
-</div>
-
-
-
+        <!-- LinkedIn -->
+        <a
+          href="https://www.linkedin.com/in/bhavishjan/"
+          target="_blank"
+          class="text-indigo-600 text-4xl hover:text-indigo-800 transition-colors"
+        >
+          <i class="ri-linkedin-box-line"></i>
+        </a>
+      </div>
     </div>
-</section>
+  </section>
 
-
-        <!-- About Section -->
-        <section id="about" class="py-20 bg-slate-50">
-            <div class="container mx-auto px-6 text-center">
-                <h2 class="text-3xl font-bold text-slate-800 mb-12 section-title">About</h2>
-                <br>
-            <div class="max-w-4xl mx-auto bg-slate-50 p-4 md:p-8 rounded-lg shadow-lg flex flex-col md:flex-row items-center gap-4 md:gap-6 mb-8 about-card relative z-10 about-description">
-            <div class="text-left">
-                <p class="text-slate-500 mt-1">
-                    I’m Bhavish and I love computers. Someday, I’ll showcase my cool projects here and maybe even some mistakes I’ve made along the way.
-                    <br><br>
-                    Currently, I’m learning the basics of C++, hoping to master it one day. 
-                    <br><br>
-                    I use Git and GitHub to save my work and I try my best not to break my laptop every other day.
-                    <br><br>
-                    If something is not working here, assume that it is a "FEATURE"
-                    <br><br>
-                    I’ll keep adding new stuff as I learn more and improve. Check back later, who knows what I’ll create or mess up next!
-                </p>
-            </div>
-            </div>
-
-                </div>
-            </div>
-        <!-- Education Section -->
-<section id="education" class="py-20 bg-slate-50">
+  <!-- About Section -->
+  <section id="about" class="py-20 bg-slate-50">
     <div class="container mx-auto px-6 text-center">
-        <h2 class="text-3xl font-bold text-slate-800 mb-12 section-title">Education</h2>
-
-        <!-- BS CS -->
-        <div class="max-w-4xl mx-auto bg-slate-50 p-4 md:p-8 rounded-lg shadow-lg flex flex-col md:flex-row items-center gap-4 md:gap-6 mb-8 education-card">
-            <img src="assets/img/fast.png" alt="FAST Logo"
-                class="w-24 h-24 md:w-32 md:h-32 rounded-full mb-4 md:mb-0"
-                onerror="this.onerror=null;this.src='https://placehold.co/100x100/e0e7ff/4f46e5?text=FAST';">
-            <div class="text-center md:text-left w-full">
-                <h3 class="text-xl md:text-2xl font-bold text-slate-800">Bachelor's - Computer Science</h3>
-                <p class="text-md md:text-lg text-indigo-600 font-medium">National University of Computer & Emerging Sciences, Islamabad</p>
-                <p class="text-slate-500 mt-1">2025 - Present</p>
-            </div>
+      <h2 class="text-3xl font-bold text-slate-800 mb-12 section-title">
+        About
+      </h2>
+      <br />
+      <div
+        class="max-w-4xl mx-auto bg-slate-50 p-4 md:p-8 rounded-lg shadow-lg flex flex-col md:flex-row items-center gap-4 md:gap-6 mb-8 about-card relative z-10 about-description"
+      >
+        <div class="text-left">
+          <p class="text-slate-500 mt-1">
+            I’m Bhavish and I love computers. Someday, I’ll showcase my cool
+            projects here and maybe even some mistakes I’ve made along the way.
+            <br /><br />
+            Currently, I’m learning the basics of C++, hoping to master it one
+            day. <br /><br />
+            I use Git and GitHub to save my work and I try my best not to break
+            my laptop every other day. <br /><br />
+            If something is not working here, assume that it is a "FEATURE"
+            <br /><br />
+            I’ll keep adding new stuff as I learn more and improve. Check back
+            later, who knows what I’ll create or mess up next!
+          </p>
         </div>
-
-        <!-- Intermediate -->
-        <div class="max-w-4xl mx-auto bg-slate-50 p-4 md:p-8 rounded-lg shadow-lg flex flex-col md:flex-row items-center gap-4 md:gap-6 mb-8 education-card">
-            <img src="assets/img/ack.jpg" alt="ACK Logo"
-                class="w-24 h-24 md:w-32 md:h-32 rounded-full mb-4 md:mb-0"
-                onerror="this.onerror=null;this.src='https://placehold.co/100x100/e0e7ff/4f46e5?text=ACK';">
-            <div class="text-center md:text-left w-full">
-                <h3 class="text-xl md:text-2xl font-bold text-slate-800">Intermediate - Computer Science</h3>
-                <p class="text-md md:text-lg text-indigo-600 font-medium">Akhuwat College University Kasur</p>
-                <p class="text-slate-500 mt-1">2023 - 2025</p>
-            </div>
-        </div>
-
-        <!-- Matric -->
-        <div class="max-w-4xl mx-auto bg-slate-50 p-4 md:p-8 rounded-lg shadow-lg flex flex-col md:flex-row items-center gap-4 md:gap-6 education-card">
-            <img src="assets/img/ncmithi.jpg" alt="NC Mithi Logo"
-                class="w-24 h-24 md:w-32 md:h-32 rounded-full mb-4 md:mb-0"
-                onerror="this.onerror=null;this.src='https://placehold.co/100x100/e0e7ff/4f46e5?text=NC Mithi';">
-            <div class="text-center md:text-left w-full">
-                <h3 class="text-xl md:text-2xl font-bold text-slate-800">Matriculation - Computer Science</h3>
-                <p class="text-md md:text-lg text-indigo-600 font-medium">Amar Jagdish Malani Government High School North Colony Mithi</p>
-                <p class="text-slate-500 mt-1">2018 - 2023</p>
-            </div>
-        </div>
+      </div>
     </div>
-</section>
+  </section>
 
-<!-- Skills Section -->
-<section id="skills" class="py-20">
+  <!-- Education Section -->
+  <section id="education" class="py-20 bg-slate-50">
     <div class="container mx-auto px-6 text-center">
-        <h2 class="text-3xl font-bold text-slate-800 mb-2 section-title">Skills</h2>
-        <br>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            <div class="bg-slate-50 p-6 rounded-lg shadow-md skills-card transition-all duration-300">
-                <i class="ri-code-s-slash-line text-4xl text-indigo-600 mb-4 inline-block"></i>
-                <h3 class="text-xl font-semibold mb-3">Languages</h3>
-                <p class="text-slate-500">C, C++, Python (Basic)</p>
-            </div>
-            <div class="bg-slate-50 p-6 rounded-lg shadow-md skills-card transition-all duration-300">
-                <i class="ri-html5-line text-4xl text-indigo-600 mb-4 inline-block"></i>
-                <h3 class="text-xl font-semibold mb-3">Web Development</h3>
-                <p class="text-slate-500">HTML, CSS, JS</p>
-            </div>
-            <div class="bg-slate-50 p-6 rounded-lg shadow-md skills-card transition-all duration-300">
-                <i class="ri-tools-line text-4xl text-indigo-600 mb-4 inline-block"></i>
-                <h3 class="text-xl font-semibold mb-3">Tools</h3>
-                <p class="text-slate-500">Git, GitHub, Linux</p>
-            </div>
-            <div class="bg-slate-50 p-6 rounded-lg shadow-md skills-card transition-all duration-300">
-                <i class="ri-music-2-line text-4xl text-indigo-600 mb-4 inline-block"></i>
-                <h3 class="text-xl font-semibold mb-3">Hobbies</h3>
-                <p class="text-slate-500">Chess + Music</p>
-            </div>
+      <h2 class="text-3xl font-bold text-slate-800 mb-12 section-title">
+        Education
+      </h2>
+
+      <!-- BS CS -->
+      <div
+        class="max-w-4xl mx-auto bg-slate-50 p-4 md:p-8 rounded-lg shadow-lg flex flex-col md:flex-row items-center gap-4 md:gap-6 mb-8 education-card"
+      >
+        <img
+          src="assets/img/fast.png"
+          alt="FAST Logo"
+          class="w-24 h-24 md:w-32 md:h-32 rounded-full mb-4 md:mb-0"
+          onerror="this.onerror=null;this.src='https://placehold.co/100x100/e0e7ff/4f46e5?text=FAST';"
+        />
+        <div class="text-center md:text-left w-full">
+          <h3 class="text-xl md:text-2xl font-bold text-slate-800">
+            Bachelor's - Computer Science
+          </h3>
+          <p class="text-md md:text-lg text-indigo-600 font-medium">
+            National University of Computer & Emerging Sciences, Islamabad
+          </p>
+          <p class="text-slate-500 mt-1">2025 - Present</p>
         </div>
+      </div>
+
+      <!-- Intermediate -->
+      <div
+        class="max-w-4xl mx-auto bg-slate-50 p-4 md:p-8 rounded-lg shadow-lg flex flex-col md:flex-row items-center gap-4 md:gap-6 mb-8 education-card"
+      >
+        <img
+          src="assets/img/ack.jpg"
+          alt="ACK Logo"
+          class="w-24 h-24 md:w-32 md:h-32 rounded-full mb-4 md:mb-0"
+          onerror="this.onerror=null;this.src='https://placehold.co/100x100/e0e7ff/4f46e5?text=ACK';"
+        />
+        <div class="text-center md:text-left w-full">
+          <h3 class="text-xl md:text-2xl font-bold text-slate-800">
+            Intermediate - Computer Science
+          </h3>
+          <p class="text-md md:text-lg text-indigo-600 font-medium">
+            Akhuwat College University Kasur
+          </p>
+          <p class="text-slate-500 mt-1">2023 - 2025</p>
+        </div>
+      </div>
+
+      <!-- Matric -->
+      <div
+        class="max-w-4xl mx-auto bg-slate-50 p-4 md:p-8 rounded-lg shadow-lg flex flex-col md:flex-row items-center gap-4 md:gap-6 education-card"
+      >
+        <img
+          src="assets/img/ncmithi.jpg"
+          alt="NC Mithi Logo"
+          class="w-24 h-24 md:w-32 md:h-32 rounded-full mb-4 md:mb-0"
+          onerror="this.onerror=null;this.src='https://placehold.co/100x100/e0e7ff/4f46e5?text=NC Mithi';"
+        />
+        <div class="text-center md:text-left w-full">
+          <h3 class="text-xl md:text-2xl font-bold text-slate-800">
+            Matriculation - Computer Science
+          </h3>
+          <p class="text-md md:text-lg text-indigo-600 font-medium">
+            Amar Jagdish Malani Government High School North Colony Mithi
+          </p>
+          <p class="text-slate-500 mt-1">2018 - 2023</p>
+        </div>
+      </div>
     </div>
-</section>
-<!-- Contact Section -->
-<section id="contact" class="pt-20 pb-4 bg-slate-50">
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="py-20">
     <div class="container mx-auto px-6 text-center">
-        <h2 class="text-3xl font-bold text-slate-800 mb-6 section-title">Contact Me</h2>
-        
-        <div class="grid grid-cols-2 md:grid-cols-6 gap-8 max-w-4xl mx-auto">
-             <a href="https://mail.google.com/mail/?view=cm&to=bhavishjanparhyar@gmail.com" class="contact-card bg-slate-50 p-6 rounded-lg shadow-md flex flex-col items-center transition-all duration-300" target="_blank">
-                <i class="ri-mail-send-line text-4xl text-indigo-600 mb-4"></i>
-                <h3 class="text-xl font-semibold mb-2">Email</h3>
-            </a>
-            <a href="https://wa.me/923211380328" target="_blank" class="contact-card bg-slate-50 p-6 rounded-lg shadow-md flex flex-col items-center transition-all duration-300">
-                <i class="ri-whatsapp-line text-4xl text-indigo-600 mb-4"></i>
-                <h3 class="text-xl font-semibold mb-2">WhatsApp</h3>
-            </a>
-            <a href="https://www.linkedin.com/in/bhavishjan" target="_blank" class="contact-card bg-slate-50 p-6 rounded-lg shadow-md flex flex-col items-center transition-all duration-300">
-                <i class="ri-linkedin-box-line text-4xl text-indigo-600 mb-4"></i>
-                <h3 class="text-xl font-semibold mb-2">LinkedIn</h3>
-            </a>
-            <a href="https://github.com/bhavishjan" target="_blank" class="contact-card bg-slate-50 p-6 rounded-lg shadow-md flex flex-col items-center transition-all duration-300">
-                <i class="ri-github-fill text-4xl text-indigo-600 mb-4"></i>
-                <h3 class="text-xl font-semibold mb-2">GitHub</h3>
-            </a>
-            <a href="https://www.instagram.com/bhavish.jan" target="_blank" class="contact-card bg-slate-50 p-6 rounded-lg shadow-md flex flex-col items-center transition-all duration-300">
-                <i class="ri-instagram-fill text-4xl text-indigo-600 mb-4"></i>
-                <h3 class="text-xl font-semibold mb-2">Instagram</h3>
-            </a>
-            <a href="https://www.facebook.com/bhavishjanparhyar" target="_blank" class="contact-card bg-slate-50 p-6 rounded-lg shadow-md flex flex-col items-center transition-all duration-300">
-                <i class="ri-facebook-fill text-4xl text-indigo-600 mb-4"></i>
-                <h3 class="text-xl font-semibold mb-2">Facebook</h3>
-            </a>
+      <h2 class="text-3xl font-bold text-slate-800 mb-2 section-title">
+        Skills
+      </h2>
+      <br />
+      <div
+        class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto"
+      >
+        <div
+          class="bg-slate-50 p-6 rounded-lg shadow-md skills-card transition-all duration-300"
+        >
+          <i class="ri-code-s-slash-line text-4xl text-indigo-600 mb-4"></i>
+          <h3 class="text-xl font-semibold mb-3">Languages</h3>
+          <p class="text-slate-500">C, C++, Python (Basic)</p>
         </div>
-
-        <p class="text-sm text-slate-400 mt-8 mb-0">
-            &copy; 2025 Bhavish Jan. All Rights Reserved.
-        </p>
+        <div
+          class="bg-slate-50 p-6 rounded-lg shadow-md skills-card transition-all duration-300"
+        >
+          <i class="ri-html5-line text-4xl text-indigo-600 mb-4"></i>
+          <h3 class="text-xl font-semibold mb-3">Web Development</h3>
+          <p class="text-slate-500">HTML, CSS, JS</p>
+        </div>
+        <div
+          class="bg-slate-50 p-6 rounded-lg shadow-md skills-card transition-all duration-300"
+        >
+          <i class="ri-tools-line text-4xl text-indigo-600 mb-4"></i>
+          <h3 class="text-xl font-semibold mb-3">Tools</h3>
+          <p class="text-slate-500">Git, GitHub, Linux</p>
+        </div>
+        <div
+          class="bg-slate-50 p-6 rounded-lg shadow-md skills-card transition-all duration-300"
+        >
+          <i class="ri-music-2-line text-4xl text-indigo-600 mb-4"></i>
+          <h3 class="text-xl font-semibold mb-3">Hobbies</h3>
+          <p class="text-slate-500">Chess + Music</p>
+        </div>
+      </div>
     </div>
-</section>
+  </section>
 
+  <!-- Contact Section -->
+  <section id="contact" class="pt-20 pb-4 bg-slate-50">
+    <div class="container mx-auto px-6 text-center">
+      <h2 class="text-3xl font-bold text-slate-800 mb-6 section-title">
+        Contact Me
+      </h2>
 
+      <div
+        class="grid grid-cols-2 md:grid-cols-6 gap-8 max-w-4xl mx-auto"
+      >
+        <a
+          href="https://mail.google.com/mail/?view=cm&to=bhavishjanparhyar@gmail.com"
+          class="contact-card bg-slate-50 p-6 rounded-lg shadow-md flex flex-col items-center transition-all duration-300"
+          target="_blank"
+        >
+          <i class="ri-mail-send-line text-4xl text-indigo-600 mb-4"></i>
+          <h3 class="text-xl font-semibold mb-2">Email</h3>
+        </a>
+        <a
+          href="https://wa.me/923211380328"
+          target="_blank"
+          class="contact-card bg-slate-50 p-6 rounded-lg shadow-md flex flex-col items-center transition-all duration-300"
+        >
+          <i class="ri-whatsapp-line text-4xl text-indigo-600 mb-4"></i>
+          <h3 class="text-xl font-semibold mb-2">WhatsApp</h3>
+        </a>
+        <a
+          href="https://www.linkedin.com/in/bhavishjan"
+          target="_blank"
+          class="contact-card bg-slate-50 p-6 rounded-lg shadow-md flex flex-col items-center transition-all duration-300"
+        >
+          <i class="ri-linkedin-box-line text-4xl text-indigo-600 mb-4"></i>
+          <h3 class="text-xl font-semibold mb-2">LinkedIn</h3>
+        </a>
+        <a
+          href="https://github.com/bhavishjan"
+          target="_blank"
+          class="contact-card bg-slate-50 p-6 rounded-lg shadow-md flex flex-col items-center transition-all duration-300"
+        >
+          <i class="ri-github-fill text-4xl text-indigo-600 mb-4"></i>
+          <h3 class="text-xl font-semibold mb-2">GitHub</h3>
+        </a>
+        <a
+          href="https://www.instagram.com/bhavish.jan"
+          target="_blank"
+          class="contact-card bg-slate-50 p-6 rounded-lg shadow-md flex flex-col items-center transition-all duration-300"
+        >
+          <i class="ri-instagram-fill text-4xl text-indigo-600 mb-4"></i>
+          <h3 class="text-xl font-semibold mb-2">Instagram</h3>
+        </a>
+        <a
+          href="https://www.facebook.com/bhavishjanparhyar"
+          target="_blank"
+          class="contact-card bg-slate-50 p-6 rounded-lg shadow-md flex flex-col items-center transition-all duration-300"
+        >
+          <i class="ri-facebook-fill text-4xl text-indigo-600 mb-4"></i>
+          <h3 class="text-xl font-semibold mb-2">Facebook</h3>
+        </a>
+      </div>
 
+      <p class="text-sm text-slate-400 mt-8 mb-0">
+        &copy; 2025 Bhavish Jan. All Rights Reserved.
+      </p>
+    </div>
+  </section>
 
+  <!-- External Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <script src="https://unpkg.com/scrollreveal"></script>
 
-    <!-- External Libraries -->
-    <!-- Particles.js for animated background -->
-    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-    <!-- ScrollReveal.js for scroll animations -->
-    <script src="https://unpkg.com/scrollreveal"></script>
-    
+  <!-- Main JavaScript -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      // --- PARTICLES.JS ---
+      particlesJS("particles-js", {
+        particles: {
+          number: { value: 80, density: { enable: true, value_area: 800 } },
+          color: { value: "#4f46e5" },
+          shape: {
+            type: "circle",
+            stroke: { width: 0, color: "#000000" },
+            polygon: { nb_sides: 5 },
+          },
+          opacity: {
+            value: 0.5,
+            random: false,
+          },
+          size: {
+            value: 3,
+            random: true,
+          },
+          line_linked: {
+            enable: true,
+            distance: 150,
+            color: "#a5b4fc",
+            opacity: 0.4,
+            width: 1,
+          },
+          move: {
+            enable: true,
+            speed: 6,
+            out_mode: "out",
+          },
+        },
+        interactivity: {
+          detect_on: "canvas",
+          events: {
+            onhover: { enable: false },
+            onclick: { enable: false },
+            resize: true, // FIXED
+          },
+        },
+        retina_detect: true,
+      });
 
-    <!-- Main JavaScript Logic -->
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-
-            
-            // --- PARTICLES.JS INITIALIZATION ---
-            particlesJS('particles-js', {
-                "particles": {
-                    "number": { "value": 80, "density": { "enable": true, "value_area": 800 } },
-                    "color": { "value": "#4f46e5" },
-                    "shape": { "type": "circle", "stroke": { "width": 0, "color": "#000000" }, "polygon": { "nb_sides": 5 } },
-                    "opacity": { "value": 0.5, "random": false, "anim": { "enable": false, "speed": 1, "opacity_min": 0.1, "sync": false } },
-                    "size": { "value": 3, "random": true, "anim": { "enable": false, "speed": 40, "size_min": 0.1, "sync": false } },
-                    "line_linked": { "enable": true, "distance": 150, "color": "#a5b4fc", "opacity": 0.4, "width": 1 },
-                    "move": { "enable": true, "speed": 6, "direction": "none", "random": false, "straight": false, "out_mode": "out", "bounce": false, "attract": { "enable": false, "rotateX": 600, "rotateY": 1200 } }
-                },
-                "interactivity": {
-                    "detect_on": "canvas",
-                    "events": { "onhover": { "enable": false, "mode": "repulse" }, "onclick": { "enable": false, "mode": "push" }, "resize": false  },
-                    "modes": { "grab": { "distance": 400, "line_linked": { "opacity": 1 } }, "bubble": { "distance": 400, "size": 40, "duration": 2, "opacity": 8, "speed": 3 }, "repulse": { "distance": 200, "duration": 0.4 }, "push": { "particles_nb": 4 }, "remove": { "particles_nb": 2 } }
-                },
-                "retina_detect": true
-            });
-
-            // --- SCROLLREVEAL.JS INITIALIZATION ---
-            const sr = ScrollReveal({
-                origin: 'top',
-                distance: '60px',
-                duration: 2000,
-                delay: 200,
-                reset: false // Animations repeat only once
-            });
-
-            sr.reveal('#home h1, #home p, #home div a', { interval: 100 });
-            sr.reveal('#home img', { origin: 'bottom' });
-            sr.reveal('.section-title, .about-description', { origin: 'left' });
-            sr.reveal('.about-image', { origin: 'right' });
-            sr.reveal('.skills-card', { interval: 100 });
-            sr.reveal('.education-card', { origin: 'bottom' });
-            sr.reveal('.experience-card', { interval: 100, origin: 'bottom' });
-            sr.reveal('.contact-info', { origin: 'left' });
-            sr.reveal('.contact-form-container', { origin: 'right' });
-
-
-            
-
-            
-            
-            
-        });
-        
-document.addEventListener('DOMContentLoaded', () => {
-    const sr = ScrollReveal({
-        origin: 'bottom',
-        distance: '60px',
+      // --- SCROLLREVEAL ---
+      const sr = ScrollReveal({
+        origin: "bottom",
+        distance: "60px",
         duration: 1000,
         delay: 100,
-        reset: false
+        reset: false,
+      });
+
+      // Animations
+      sr.reveal("#home h1, #home p, #home div a", { interval: 100 });
+      sr.reveal("#home img", { origin: "bottom" });
+      sr.reveal(".section-title, .about-description", { origin: "left" });
+      sr.reveal(".skills-card", { interval: 100 });
+      sr.reveal(".education-card", { origin: "bottom" });
+      sr.reveal(".contact-card", { interval: 100, origin: "bottom" });
     });
 
-    // Existing Skills animation
-    sr.reveal('.skills-card', { interval: 100 });
-
-    // Add Contact cards animation
-    sr.reveal('.contact-card', { interval: 100 });
-});
-window.onbeforeunload = function () {
-    window.scrollTo(0, 0);
-  };
-
-    </script>
-    
+    // Scroll reset on reload
+    window.onbeforeunload = function () {
+      window.scrollTo(0, 0);
+    };
+  </script>
 </body>
 </html>
-
-
-
-
-
