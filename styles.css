@@ -1,0 +1,52 @@
+ @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+ body {
+     font-family: 'Inter', sans-serif;
+
+     /* Hide scrollbar but keep scrolling */
+     -ms-overflow-style: none;
+     /* IE and Edge */
+     scrollbar-width: none;
+     /* Firefox */
+ }
+
+ body::-webkit-scrollbar {
+     display: none;
+     /* Chrome, Safari, Opera */
+ }
+
+ /* Style for the particles.js container */
+ #particles-js {
+     position: fixed;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     z-index: 0;
+ }
+
+
+ /* Ensure content is above the particles background */
+ .content-container {
+     position: relative;
+     z-index: 1;
+ }
+
+ html,
+ body {
+     margin: 0;
+     padding: 0;
+     overflow: auto;
+     /* allow scrolling */
+     -ms-overflow-style: none;
+     /* IE and Edge */
+     scrollbar-width: none;
+     /* Firefox */
+ }
+
+ /* Hide scrollbar but keep scrolling */
+ html::-webkit-scrollbar,
+ body::-webkit-scrollbar {
+     display: none;
+     /* Chrome, Safari, Opera */
+ }
