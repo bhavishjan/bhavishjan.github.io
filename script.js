@@ -55,6 +55,3 @@ document.addEventListener('DOMContentLoaded', () => {
     // Add Contact cards animation
     sr.reveal('.contact-card', { interval: 100 });
 });
-window.onbeforeunload = function () {
-    window.scrollTo(0, 0);
-};
