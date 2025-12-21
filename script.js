@@ -1,10 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-
     // --- PARTICLES.JS INITIALIZATION ---
     particlesJS('particles-js', {
         "particles": {
-            "number": { "value": 80, "density": { "enable": true, "value_area": 800 } },
+            "number": { "value": 125, "density": { "enable": true, "value_area": 800 } },
             "color": { "value": "#4f46e5" },
             "shape": { "type": "circle", "stroke": { "width": 0, "color": "#000000" }, "polygon": { "nb_sides": 5 } },
             "opacity": { "value": 0.5, "random": false, "anim": { "enable": false, "speed": 1, "opacity_min": 0.1, "sync": false } },
@@ -14,44 +13,48 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         "interactivity": {
             "detect_on": "canvas",
-            "events": { "onhover": { "enable": false, "mode": "repulse" }, "onclick": { "enable": false, "mode": "push" }, "resize": false },
-            "modes": { "grab": { "distance": 400, "line_linked": { "opacity": 1 } }, "bubble": { "distance": 400, "size": 40, "duration": 2, "opacity": 8, "speed": 3 }, "repulse": { "distance": 200, "duration": 0.4 }, "push": { "particles_nb": 4 }, "remove": { "particles_nb": 2 } }
+            "events": { "onhover": { "enable": true, "mode": "repulse" }, "onclick": { "enable": false, "mode": "push" }, "resize": false },
+            "modes": { "grab": { "distance": 400, "line_linked": { "opacity": 1 } }, "bubble": { "distance": 400, "size": 40, "duration": 2, "opacity": 8, "speed": 3 }, "repulse": { "distance": 80, "duration": 0.4 }, "push": { "particles_nb": 4 }, "remove": { "particles_nb": 2 } }
         },
         "retina_detect": true
     });
 
     // --- SCROLLREVEAL.JS INITIALIZATION ---
     const sr = ScrollReveal({
-        origin: 'top',
         distance: '60px',
-        duration: 2000,
+        duration: 1500,
         delay: 200,
-        reset: false // Animations repeat only once
+        reset: true
     });
 
-    sr.reveal('#home h1, #home p, #home div a', { interval: 100 });
+    // Home section
+    sr.reveal('#home h1, #home p, #home div a', { origin: 'top', interval: 100 });
     sr.reveal('#home img', { origin: 'bottom' });
+
+    // About section
     sr.reveal('.section-title, .about-description', { origin: 'left' });
     sr.reveal('.about-image', { origin: 'right' });
-    sr.reveal('.skills-card', { interval: 100 });
+
+    // Skills section
+    sr.reveal('.skills-card', { origin: 'top', interval: 100 });
+
+    // Education & Experience
     sr.reveal('.education-card', { origin: 'bottom' });
-    sr.reveal('.experience-card', { interval: 100, origin: 'bottom' });
+    sr.reveal('.experience-card', { origin: 'bottom', interval: 100 });
+
+    // Contact section
     sr.reveal('.contact-info', { origin: 'left' });
     sr.reveal('.contact-form-container', { origin: 'right' });
+    sr.reveal('.contact-card', { origin: 'bottom', interval: 100 });
 });
+let lastScroll = 0;
+window.addEventListener('scroll', () => {
+    const currentScroll = window.pageYOffset;
 
-document.addEventListener('DOMContentLoaded', () => {
-    const sr = ScrollReveal({
-        origin: 'bottom',
-        distance: '60px',
-        duration: 1000,
-        delay: 100,
-        reset: false
-    });
+    if (currentScroll > lastScroll) {
+        // scrolling down
+        sr.reveal('.skills-card, .contact-card', { origin: 'top', interval: 100 });
+    }
 
-    // Existing Skills animation
-    sr.reveal('.skills-card', { interval: 100 });
-
-    // Add Contact cards animation
-    sr.reveal('.contact-card', { interval: 100 });
+    lastScroll = currentScroll <= 0 ? 0 : currentScroll; // avoid negative values
 });
