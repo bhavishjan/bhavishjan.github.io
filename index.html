@@ -1,236 +1,281 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Website Title -->
-    <title>Bhavish Jan | CS @ FAST-NUCES</title>
-    <!-- SEO Meta Description -->
-    <meta name="description"
-        content="I am a Computer Science Undergrad at FAST NUCES Islamabad. Explore my portfolio on my personal website.">
-    <!-- Favicon -->
-    <link rel="icon" href="assets/img/circle-logo.png" type="image/png">
-
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
-
-
-    <!-- Remixicon for Icons -->
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-    <!-- Add in <head> -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <title>Bhavish Jan</title>
+    <meta
+        name="description"
+        content="Bhavish Jan is a Computer Science undergraduate at FAST-NUCES Islamabad. Explore education, skills, and ways to connect."
+    >
+    <meta name="theme-color" content="#020814">
+    <link rel="icon" href="assets/img/favicon.svg?v=1" type="image/svg+xml">
+    <link rel="shortcut icon" href="assets/img/favicon.svg?v=1" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="assets/img/favicon.svg?v=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&family=Manrope:wght@400;500;600;700;800&family=Sora:wght@400;600;700;800&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/line-awesome/1.3.0/line-awesome/css/line-awesome.min.css">
     <link rel="stylesheet" href="styles.css">
-    <script src="script.js"></script>
-    <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/line-awesome/1.3.0/line-awesome/css/line-awesome.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/line-awesome/1.3.0/line-awesome/css/line-awesome.min.css">
-
-
-
 </head>
+<body>
+    <div class="page-glow page-glow-one" aria-hidden="true"></div>
+    <div class="page-glow page-glow-two" aria-hidden="true"></div>
+    <div id="particles-js" aria-hidden="true"></div>
+    <div class="scroll-progress" aria-hidden="true"></div>
 
-<body class="bg-white text-slate-700">
-    <!-- Home/Profile Section -->
-    <section id="home" class="relative h-screen flex items-center justify-center text-center overflow-hidden">
-        <div id="particles-js"></div>
-        <div class="content-container max-w-4xl mx-auto px-6">
-            <img src="assets/img/morning pic.jpeg" alt="Bhavish Jan Profile Picture"
-                class="w-60 h-60 rounded-full mx-auto mb-6 border-4 border-white shadow-lg"
-                onerror="this.onerror=null;this.src='https://placehold.co/150x150/e0e7ff/4f46e5?text=Bhavish';">
+    <header class="site-header" id="site-header">
+        <nav class="site-nav container">
+            <a class="brand" href="#home" aria-label="Go to top">
+                <span class="brand-mark">BJ</span>
+            </a>
 
+            <button
+                class="nav-toggle"
+                type="button"
+                aria-expanded="false"
+                aria-controls="nav-menu"
+                aria-label="Open navigation menu"
+            >
+                <span></span>
+                <span></span>
+            </button>
 
-            <h1 class="text-4xl md:text-6xl font-bold text-slate-800 mb-2" id="main-name">Bhavish Jan</h1>
-
-            <br>
-            <p class="text-lg md:text-xl text-indigo-600 font-semibold mb-6">CS'29 @ FAST Islamabad</p>
-
-            <div id="socials-container" class="flex justify-center space-x-6">
-                <!-- Email -->
-                <a href="https://mail.google.com/mail/?view=cm&to=bhavishjanparhyar@gmail.com" target="_blank"
-                    class="text-indigo-600 text-4xl hover:text-indigo-800 transition-colors">
-                    <i class="ri-mail-send-line"></i>
-                </a>
-
-                <!-- WhatsApp -->
-                <a href="https://wa.me/923211380328" target="_blank"
-                    class="text-indigo-600 text-4xl hover:text-indigo-800 transition-colors">
-                    <i class="ri-whatsapp-line"></i>
-                </a>
-
-                <!-- LinkedIn -->
-                <a href="https://www.linkedin.com/in/bhavishjan/" target="_blank"
-                    class="text-indigo-600 text-4xl hover:text-indigo-800 transition-colors">
-                    <i class="ri-linkedin-box-line"></i>
-                </a>
+            <div class="nav-menu" id="nav-menu">
+                <a href="#about">About</a>
+                <a href="#education">Education</a>
+                <a href="#skills">Skills</a>
+                <a href="#contact">Contact</a>
+                <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Toggle dark mode">
+                    <i class="ri-moon-clear-line theme-icon theme-icon-moon"></i>
+                    <i class="ri-sun-line theme-icon theme-icon-sun"></i>
+                </button>
             </div>
+        </nav>
+    </header>
 
-
-
-        </div>
-    </section>
-
-
-    <!-- About Section -->
-    <section id="about" class="py-20 bg-white">
-        <div class="container mx-auto px-6 text-center">
-            <h2 class="text-3xl font-bold text-slate-800 mb-12 section-title">About</h2>
-            <br>
-            <div
-                class="max-w-4xl mx-auto bg-white p-4 md:p-8 rounded-lg shadow-lg flex flex-col md:flex-row items-center gap-4 md:gap-6 mb-8 about-card relative z-10 about-description">
-                <div class="text-left">
-                    <p class="text-slate-500 mt-1">
-                        I’m Bhavish Jan and I love both Computer and Chess. Someday, I’ll showcase my cool projects here and
-                        maybe even some mistakes I have made along the way.
-                        <br><br>
-                        Currently, I’m learning the basics of C++, hoping to master it one day.
-                        <br><br>
-                        I use Git and GitHub to save my work and I try my best not to break my laptop every other day.
-                        <br><br>
-                        If something is not working here, assume that it is a "FEATURE"
-                        <br><br>
-                        I’ll keep adding new stuff as I learn more and improve. Check back later, who knows what I’ll
-                        create or mess up next!
+    <main>
+        <section id="home" class="hero section">
+            <div class="container hero-layout">
+                <div class="hero-copy reveal reveal-up">
+                    <p class="eyebrow">Computer Science Student - FAST Islamabad</p>
+                    <h1 id="main-name">Bhavish Jan</h1>
+                    <p class="hero-subtitle">
+                        Building my foundations in code, chasing clarity in chess, and slowly turning ideas into
+                        projects worth sharing.
                     </p>
+
+                    <div class="hero-actions">
+                        <a class="button button-primary" href="#contact">Let's Connect</a>
+                        <a class="button button-secondary" href="#about">See My Story</a>
+                    </div>
+
+                    <div class="social-links" aria-label="Social links">
+                        <a href="https://mail.google.com/mail/?view=cm&to=bhavishjanparhyar@gmail.com" target="_blank" rel="noreferrer" aria-label="Email">
+                            <i class="ri-mail-send-line"></i>
+                        </a>
+                        <a href="https://wa.me/923211380328" target="_blank" rel="noreferrer" aria-label="WhatsApp">
+                            <i class="ri-whatsapp-line"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/bhavishjan/" target="_blank" rel="noreferrer" aria-label="LinkedIn">
+                            <i class="ri-linkedin-box-line"></i>
+                        </a>
+                        <a href="https://github.com/bhavishjan" target="_blank" rel="noreferrer" aria-label="GitHub">
+                            <i class="ri-github-line"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="hero-visual reveal reveal-scale">
+                    <div class="portrait-shell">
+                        <div class="portrait-ring"></div>
+                        <img
+                            src="assets/img/morning pic.jpeg"
+                            alt="Bhavish Jan Profile Picture"
+                            class="hero-portrait"
+                            onerror="this.onerror=null;this.src='https://placehold.co/600x600/12314f/f7fafc?text=Bhavish+Jan';"
+                        >
+                    </div>
+                    <div class="hero-badge hero-badge-top">CS'29 @ FAST</div>
+                    <div class="hero-badge hero-badge-bottom">Chess - Code - Curiosity</div>
                 </div>
             </div>
 
+            <a class="scroll-indicator" href="#about" aria-label="Scroll down to about section">
+                <span>Scroll</span>
+                <i class="ri-arrow-down-line"></i>
+            </a>
+        </section>
+
+        <section id="about" class="section">
+            <div class="container">
+                <div class="section-heading reveal reveal-up">
+                    <p class="section-kicker">About</p>
+                    <h2>A curious builder with a practical sense of humor.</h2>
+                </div>
+
+                <article class="feature-card reveal reveal-up">
+                    <p>
+                        I'm Bhavish Jan, and I genuinely enjoy both computers and chess. This site is where I'll keep
+                        collecting the projects, experiments, and lessons that shape how I think and build.
+                    </p>
+                    <p>
+                        Right now I'm learning the fundamentals of C++ and strengthening my problem-solving one step at a
+                        time. I use Git and GitHub to track my work, learn from mistakes, and keep moving forward.
+                    </p>
+                    <p>
+                        If something looks a little unusual here, there's a fair chance it started as a bug and stayed
+                        because it had personality. More work is on the way.
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <section id="education" class="section section-alt">
+            <div class="container">
+                <div class="section-heading reveal reveal-up">
+                    <p class="section-kicker">Education</p>
+                    <h2>Where I've been learning and growing.</h2>
+                </div>
+
+                <div class="timeline">
+                    <article class="timeline-card reveal reveal-left">
+                        <img
+                            src="assets/img/fast.png"
+                            alt="FAST logo"
+                            onerror="this.onerror=null;this.src='https://placehold.co/160x160/0f172a/e2e8f0?text=FAST';"
+                        >
+                        <div>
+                            <p class="timeline-year">2025 - Present</p>
+                            <h3>Bachelor's in Computer Science</h3>
+                            <p class="timeline-place">National University of Computer & Emerging Sciences, Islamabad</p>
+                            <p>Currently building a strong CS foundation while exploring programming, problem solving, and software development.</p>
+                        </div>
+                    </article>
+
+                    <article class="timeline-card reveal reveal-right">
+                        <img
+                            src="assets/img/ack.jpg"
+                            alt="ACK logo"
+                            onerror="this.onerror=null;this.src='https://placehold.co/160x160/0f172a/e2e8f0?text=ACK';"
+                        >
+                        <div>
+                            <p class="timeline-year">2023 - 2025</p>
+                            <h3>Intermediate in Computer Science</h3>
+                            <p class="timeline-place">Akhuwat College University Kasur, Lahore</p>
+                            <p>Developed discipline, academic consistency, and the confidence to commit more seriously to tech.</p>
+                        </div>
+                    </article>
+
+                    <article class="timeline-card reveal reveal-left">
+                        <img
+                            src="assets/img/ncmithi.jpg"
+                            alt="NC Mithi logo"
+                            onerror="this.onerror=null;this.src='https://placehold.co/160x160/0f172a/e2e8f0?text=NC';"
+                        >
+                        <div>
+                            <p class="timeline-year">2018 - 2023</p>
+                            <h3>Matriculation in Computer Science</h3>
+                            <p class="timeline-place">Amar Jagdish Malani Government High School North Colony Mithi</p>
+                            <p>The place where my early interest in computers began turning into something I wanted to keep pursuing.</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="section">
+            <div class="container">
+                <div class="section-heading reveal reveal-up">
+                    <p class="section-kicker">Skills</p>
+                    <h2>The tools and interests I keep coming back to.</h2>
+                </div>
+
+                <div class="skills-grid">
+                    <article class="skill-card reveal reveal-up">
+                        <i class="ri-code-s-slash-line"></i>
+                        <h3>Languages</h3>
+                        <p>C, C++, Python (Basic)</p>
+                    </article>
+
+                    <article class="skill-card reveal reveal-up">
+                        <i class="ri-layout-4-line"></i>
+                        <h3>Web Development</h3>
+                        <p>HTML, CSS, JavaScript</p>
+                    </article>
+
+                    <article class="skill-card reveal reveal-up">
+                        <i class="ri-git-branch-line"></i>
+                        <h3>Tools</h3>
+                        <p>Git, GitHub, Linux</p>
+                    </article>
+
+                    <article class="skill-card reveal reveal-up">
+                        <i class="ri-chess-line"></i>
+                        <h3>Hobbies</h3>
+                        <p>Chess, music, and learning through experimentation</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section section-alt">
+            <div class="container">
+                <div class="section-heading reveal reveal-up">
+                    <p class="section-kicker">Contact</p>
+                    <h2>Reach out anytime.</h2>
+                </div>
+
+                <div class="contact-grid">
+                    <a class="contact-card reveal reveal-up" href="https://mail.google.com/mail/?view=cm&to=bhavishjanparhyar@gmail.com" target="_blank" rel="noreferrer">
+                        <i class="ri-mail-send-line"></i>
+                        <h3>Email</h3>
+                        <p>Start a conversation</p>
+                    </a>
+
+                    <a class="contact-card reveal reveal-up" href="https://wa.me/923211380328" target="_blank" rel="noreferrer">
+                        <i class="ri-whatsapp-line"></i>
+                        <h3>WhatsApp</h3>
+                        <p>Send a quick message</p>
+                    </a>
+
+                    <a class="contact-card reveal reveal-up" href="https://www.linkedin.com/in/bhavishjan" target="_blank" rel="noreferrer">
+                        <i class="ri-linkedin-box-line"></i>
+                        <h3>LinkedIn</h3>
+                        <p>Connect professionally</p>
+                    </a>
+
+                    <a class="contact-card reveal reveal-up" href="https://github.com/bhavishjan" target="_blank" rel="noreferrer">
+                        <i class="ri-github-line"></i>
+                        <h3>GitHub</h3>
+                        <p>See what I'm building</p>
+                    </a>
+
+                    <a class="contact-card reveal reveal-up" href="https://www.instagram.com/bhavish.jan" target="_blank" rel="noreferrer">
+                        <i class="ri-instagram-line"></i>
+                        <h3>Instagram</h3>
+                        <p>Catch the personal side</p>
+                    </a>
+
+                    <a class="contact-card reveal reveal-up" href="https://www.chess.com/member/bhavishjan" target="_blank" rel="noreferrer">
+                        <i class="las la-chess-knight"></i>
+                        <h3>Chess.com</h3>
+                        <p>Play or follow along</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <p>&copy; <span id="year"></span> Bhavish Jan. All rights reserved.</p>
+            <a href="#home">Back to top</a>
         </div>
-        </div>
-        <!-- Education Section -->
-        <section id="education" class="py-20 bg-white">
-            <div class="container mx-auto px-6 text-center">
-                <h2 class="text-3xl font-bold text-slate-800 mb-12 section-title">Education</h2>
+    </footer>
 
-                <!-- BS CS -->
-                <div
-                    class="max-w-4xl mx-auto bg-white p-4 md:p-8 rounded-lg shadow-lg flex flex-col md:flex-row items-center gap-4 md:gap-6 mb-8 education-card">
-                    <img src="assets/img/fast.png" alt="FAST Logo"
-                        class="w-24 h-24 md:w-32 md:h-32 rounded-full mb-4 md:mb-0"
-                        onerror="this.onerror=null;this.src='https://placehold.co/100x100/e0e7ff/4f46e5?text=FAST';">
-                    <div class="text-center md:text-left w-full">
-                        <h3 class="text-xl md:text-2xl font-bold text-slate-800">Bachelor's - Computer Science</h3>
-                        <p class="text-md md:text-lg text-indigo-600 font-medium">National University of Computer &
-                            Emerging Sciences, Islamabad</p>
-                        <p class="text-slate-500 mt-1">2025 - Present</p>
-                    </div>
-                </div>
-
-                <!-- Intermediate -->
-                <div
-                    class="max-w-4xl mx-auto bg-white p-4 md:p-8 rounded-lg shadow-lg flex flex-col md:flex-row items-center gap-4 md:gap-6 mb-8 education-card">
-                    <img src="assets/img/ack.jpg" alt="ACK Logo"
-                        class="w-24 h-24 md:w-32 md:h-32 rounded-full mb-4 md:mb-0"
-                        onerror="this.onerror=null;this.src='https://placehold.co/100x100/e0e7ff/4f46e5?text=ACK';">
-                    <div class="text-center md:text-left w-full">
-                        <h3 class="text-xl md:text-2xl font-bold text-slate-800">Intermediate - Computer Science</h3>
-                        <p class="text-md md:text-lg text-indigo-600 font-medium">Akhuwat College University Kasur (Lahore)</p>
-                        <p class="text-slate-500 mt-1">2023 - 2025</p>
-                    </div>
-                </div>
-
-                <!-- Matric -->
-                <div
-                    class="max-w-4xl mx-auto bg-white p-4 md:p-8 rounded-lg shadow-lg flex flex-col md:flex-row items-center gap-4 md:gap-6 education-card">
-                    <img src="assets/img/ncmithi.jpg" alt="NC Mithi Logo"
-                        class="w-24 h-24 md:w-32 md:h-32 rounded-full mb-4 md:mb-0"
-                        onerror="this.onerror=null;this.src='https://placehold.co/100x100/e0e7ff/4f46e5?text=NC Mithi';">
-                    <div class="text-center md:text-left w-full">
-                        <h3 class="text-xl md:text-2xl font-bold text-slate-800">Matriculation - Computer Science</h3>
-                        <p class="text-md md:text-lg text-indigo-600 font-medium">Amar Jagdish Malani Government High
-                            School North Colony Mithi</p>
-                        <p class="text-slate-500 mt-1">2018 - 2023</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Skills Section -->
-        <section id="skills" class="py-20">
-            <div class="container mx-auto px-6 text-center">
-                <h2 class="text-3xl font-bold text-slate-800 mb-2 section-title">Skills</h2>
-                <br>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-                    <div class="bg-white p-6 rounded-lg shadow-md skills-card transition-all duration-300">
-                        <i class="ri-code-s-slash-line text-4xl text-indigo-600 mb-4 inline-block"></i>
-                        <h3 class="text-xl font-semibold mb-3">Languages</h3>
-                        <p class="text-slate-500">C, C++, Python (Basic)</p>
-                    </div>
-                    <div class="bg-white p-6 rounded-lg shadow-md skills-card transition-all duration-300">
-                        <i class="ri-html5-line text-4xl text-indigo-600 mb-4 inline-block"></i>
-                        <h3 class="text-xl font-semibold mb-3">Web Development</h3>
-                        <p class="text-slate-500">HTML, CSS, JS</p>
-                    </div>
-                    <div class="bg-white p-6 rounded-lg shadow-md skills-card transition-all duration-300">
-                        <i class="ri-tools-line text-4xl text-indigo-600 mb-4 inline-block"></i>
-                        <h3 class="text-xl font-semibold mb-3">Tools</h3>
-                        <p class="text-slate-500">Git, GitHub, Linux</p>
-                    </div>
-                    <div class="bg-white p-6 rounded-lg shadow-md skills-card transition-all duration-300">
-                        <i class="ri-music-2-line text-4xl text-indigo-600 mb-4 inline-block"></i>
-                        <h3 class="text-xl font-semibold mb-3">Hobbies</h3>
-                        <p class="text-slate-500">Chess, Music</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section id="contact" class="py-20 pb-2 bg-white">
-            <div class="container mx-auto px-6 text-center">
-                <h2 class="text-3xl font-bold text-slate-800 mb-6 section-title">Contact Me</h2>
-                <div class="grid grid-cols-2 md:grid-cols-6 gap-8 max-w-4xl mx-auto">
-                    <a href="https://mail.google.com/mail/?view=cm&to=bhavishjanparhyar@gmail.com"
-                        class="contact-card bg-white p-6 rounded-lg shadow-md flex flex-col items-center transition-all duration-300"
-                        target="_blank">
-                        <i class="ri-mail-send-line text-4xl text-indigo-600 mb-4"></i>
-                        <h3 class="text-xl font-semibold mb-2">Email</h3>
-                    </a>
-                    <a href="https://wa.me/923211380328" target="_blank"
-                        class="contact-card bg-white p-6 rounded-lg shadow-md flex flex-col items-center transition-all duration-300">
-                        <i class="ri-whatsapp-line text-4xl text-indigo-600 mb-4"></i>
-                        <h3 class="text-xl font-semibold mb-2">WhatsApp</h3>
-                    </a>
-                    <a href="https://www.linkedin.com/in/bhavishjan" target="_blank"
-                        class="contact-card bg-white p-6 rounded-lg shadow-md flex flex-col items-center transition-all duration-300">
-                        <i class="ri-linkedin-box-line text-4xl text-indigo-600 mb-4"></i>
-                        <h3 class="text-xl font-semibold mb-2">LinkedIn</h3>
-                    </a>
-                    <a href="https://github.com/bhavishjan" target="_blank"
-                        class="contact-card bg-white p-6 rounded-lg shadow-md flex flex-col items-center transition-all duration-300">
-                        <i class="ri-github-line text-4xl text-indigo-600 mb-4"></i>
-                        <h3 class="text-xl font-semibold mb-2">GitHub</h3>
-                    </a>
-                    <a href="https://www.instagram.com/bhavish.jan" target="_blank"
-                        class="contact-card bg-white p-6 rounded-lg shadow-md flex flex-col items-center transition-all duration-300">
-                        <i class="ri-instagram-line text-4xl text-indigo-600 mb-4"></i>
-                        <h3 class="text-xl font-semibold mb-2">Instagram</h3>
-                    </a>
-                    <a href="https://www.chess.com/member/bhavishjan" target="_blank"
-   class="contact-card bg-white p-6 rounded-lg shadow-md flex flex-col items-center transition-all duration-300">
-   <i class="las la-chess-knight text-4xl text-indigo-600 mb-4"></i>
-   <h3 class="text-xl font-semibold mb-2">Chess</h3>
-</a>
-
-
-                </div>
-                <br><br><br>
-                <p class="text-sm text-slate-400 mt-2 mb-0">&copy; 2025 Bhavish Jan. All Rights Reserved.</p>
-            </div>
-        </section>
-
-        <!-- External Libraries -->
-        <!-- Particles.js for animated background -->
-        <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-        <!-- ScrollReveal.js for scroll animations -->
-        <script src="https://unpkg.com/scrollreveal"></script>
-
-
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="script.js"></script>
 </body>
-
 </html>

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Bhavish Jan favicon">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#08101f" />
+      <stop offset="100%" stop-color="#12294a" />
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#52f3ef" />
+      <stop offset="100%" stop-color="#ffb84d" />
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="16" fill="url(#bg)" />
+  <rect x="6" y="6" width="52" height="52" rx="13" fill="none" stroke="url(#accent)" stroke-width="2.5" />
+  <path d="M18 18h10v4h-6v5h5.5c4.8 0 8.5 2.9 8.5 8.1 0 6-4.6 10.9-12.2 10.9H18V18zm6 24c3.6 0 6.2-2.2 6.2-5.8 0-2.9-2-4.6-5.1-4.6H22v10.4h2z" fill="#f4fbff"/>
+  <circle cx="45.5" cy="19" r="4.5" fill="#52f3ef" />
+  <circle cx="45.5" cy="45" r="4.5" fill="#ffb84d" />
+</svg>

@@ -1,60 +1,175 @@
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener("DOMContentLoaded", () => {
+    const body = document.body;
+    const header = document.getElementById("site-header");
+    const navToggle = document.querySelector(".nav-toggle");
+    const navMenu = document.getElementById("nav-menu");
+    const themeToggle = document.getElementById("theme-toggle");
+    const progressBar = document.querySelector(".scroll-progress");
+    const revealItems = document.querySelectorAll(".reveal");
+    const year = document.getElementById("year");
+    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const heroVisual = document.querySelector(".hero-visual");
+    let ticking = false;
 
-    // --- PARTICLES.JS INITIALIZATION ---
-    particlesJS('particles-js', {
-        "particles": {
-            "number": { "value": 125, "density": { "enable": true, "value_area": 800 } },
-            "color": { "value": "#4f46e5" },
-            "shape": { "type": "circle", "stroke": { "width": 0, "color": "#000000" }, "polygon": { "nb_sides": 5 } },
-            "opacity": { "value": 0.5, "random": false, "anim": { "enable": false, "speed": 1, "opacity_min": 0.1, "sync": false } },
-            "size": { "value": 3, "random": true, "anim": { "enable": false, "speed": 40, "size_min": 0.1, "sync": false } },
-            "line_linked": { "enable": true, "distance": 150, "color": "#a5b4fc", "opacity": 0.4, "width": 1 },
-            "move": { "enable": true, "speed": 6, "direction": "none", "random": false, "straight": false, "out_mode": "out", "bounce": false, "attract": { "enable": false, "rotateX": 600, "rotateY": 1200 } }
-        },
-        "interactivity": {
-            "detect_on": "canvas",
-            "events": { "onhover": { "enable": true, "mode": "repulse" }, "onclick": { "enable": false, "mode": "push" }, "resize": false },
-            "modes": { "grab": { "distance": 400, "line_linked": { "opacity": 1 } }, "bubble": { "distance": 400, "size": 40, "duration": 2, "opacity": 8, "speed": 3 }, "repulse": { "distance": 80, "duration": 0.4 }, "push": { "particles_nb": 4 }, "remove": { "particles_nb": 2 } }
-        },
-        "retina_detect": true
+    const savedTheme = localStorage.getItem("theme");
+    const systemPrefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    const initialTheme = savedTheme || (systemPrefersDark ? "dark" : "light");
+
+    const applyTheme = (theme) => {
+        const isDark = theme === "dark";
+        body.classList.toggle("dark-mode", isDark);
+        themeToggle.setAttribute("aria-pressed", String(isDark));
+        localStorage.setItem("theme", theme);
+        setupParticles(isDark);
+    };
+
+    applyTheme(initialTheme);
+
+    themeToggle.addEventListener("click", () => {
+        const nextTheme = body.classList.contains("dark-mode") ? "light" : "dark";
+        applyTheme(nextTheme);
     });
 
-    // --- SCROLLREVEAL.JS INITIALIZATION ---
-    const sr = ScrollReveal({
-        distance: '60px',
-        duration: 1500,
-        delay: 200,
-        reset: true
+    navToggle.addEventListener("click", () => {
+        const isOpen = navMenu.classList.toggle("open");
+        navToggle.setAttribute("aria-expanded", String(isOpen));
     });
 
-    // Home section
-    sr.reveal('#home h1, #home p, #home div a', { origin: 'top', interval: 100 });
-    sr.reveal('#home img', { origin: 'bottom' });
+    navMenu.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", () => {
+            navMenu.classList.remove("open");
+            navToggle.setAttribute("aria-expanded", "false");
+        });
+    });
 
-    // About section
-    sr.reveal('.section-title, .about-description', { origin: 'left' });
-    sr.reveal('.about-image', { origin: 'right' });
+    const updateScrollUI = () => {
+        const scrollTop = window.scrollY;
+        const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+        const progress = maxScroll > 0 ? scrollTop / maxScroll : 0;
 
-    // Skills section
-    sr.reveal('.skills-card', { origin: 'top', interval: 100 });
+        progressBar.style.transform = `scaleX(${progress})`;
+        header.classList.toggle("scrolled", scrollTop > 24);
 
-    // Education & Experience
-    sr.reveal('.education-card', { origin: 'bottom' });
-    sr.reveal('.experience-card', { origin: 'bottom', interval: 100 });
+        if (!prefersReducedMotion && heroVisual) {
+            const offset = Math.min(scrollTop * 0.035, 12);
+            heroVisual.style.transform = `translate3d(0, ${offset}px, 0)`;
+        }
+    };
 
-    // Contact section
-    sr.reveal('.contact-info', { origin: 'left' });
-    sr.reveal('.contact-form-container', { origin: 'right' });
-    sr.reveal('.contact-card', { origin: 'bottom', interval: 100 });
-});
-let lastScroll = 0;
-window.addEventListener('scroll', () => {
-    const currentScroll = window.pageYOffset;
+    const handleScroll = () => {
+        if (ticking) {
+            return;
+        }
 
-    if (currentScroll > lastScroll) {
-        // scrolling down
-        sr.reveal('.skills-card, .contact-card', { origin: 'top', interval: 100 });
+        ticking = true;
+        window.requestAnimationFrame(() => {
+            updateScrollUI();
+            ticking = false;
+        });
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    updateScrollUI();
+
+    if (year) {
+        year.textContent = new Date().getFullYear();
     }
 
-    lastScroll = currentScroll <= 0 ? 0 : currentScroll; // avoid negative values
+    if (!prefersReducedMotion) {
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("is-visible");
+                        observer.unobserve(entry.target);
+                    }
+                });
+            },
+            {
+                threshold: 0.18,
+                rootMargin: "0px 0px -40px 0px"
+            }
+        );
+
+        revealItems.forEach((item, index) => {
+            item.style.transitionDelay = `${Math.min(index * 70, 280)}ms`;
+            observer.observe(item);
+        });
+
+    } else {
+        revealItems.forEach((item) => item.classList.add("is-visible"));
+    }
 });
+
+function setupParticles(isDark) {
+    if (typeof particlesJS !== "function") {
+        return;
+    }
+
+    const particleColor = isDark ? "#42d6d9" : "#0ea5a8";
+    const lineColor = isDark ? "#f7b955" : "#f0b453";
+    const opacity = isDark ? 0.2 : 0.28;
+
+    particlesJS("particles-js", {
+        particles: {
+            number: {
+                value: 32,
+                density: {
+                    enable: true,
+                    value_area: 1100
+                }
+            },
+            color: {
+                value: particleColor
+            },
+            shape: {
+                type: "circle"
+            },
+            opacity: {
+                value: opacity,
+                random: true
+            },
+            size: {
+                value: 3,
+                random: true
+            },
+            line_linked: {
+                enable: true,
+                distance: 120,
+                color: lineColor,
+                opacity: opacity,
+                width: 1
+            },
+            move: {
+                enable: true,
+                speed: 0.8,
+                direction: "none",
+                random: true,
+                straight: false,
+                out_mode: "out"
+            }
+        },
+        interactivity: {
+            detect_on: "canvas",
+            events: {
+                onhover: {
+                    enable: false,
+                    mode: "grab"
+                },
+                onclick: {
+                    enable: false
+                },
+                resize: true
+            },
+            modes: {
+                grab: {
+                    distance: 120,
+                    line_linked: {
+                        opacity: isDark ? 0.3 : 0.35
+                    }
+                }
+            }
+        },
+        retina_detect: true
+    });
+}
