@@ -11,19 +11,14 @@ document.addEventListener("DOMContentLoaded", () => {
     const heroVisual = document.querySelector(".hero-visual");
     let ticking = false;
 
-    const savedTheme = localStorage.getItem("theme");
-    const systemPrefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-    const initialTheme = savedTheme || (systemPrefersDark ? "dark" : "light");
-
     const applyTheme = (theme) => {
         const isDark = theme === "dark";
         body.classList.toggle("dark-mode", isDark);
         themeToggle.setAttribute("aria-pressed", String(isDark));
-        localStorage.setItem("theme", theme);
         setupParticles(isDark);
     };
 
-    applyTheme(initialTheme);
+    applyTheme("light");
 
     themeToggle.addEventListener("click", () => {
         const nextTheme = body.classList.contains("dark-mode") ? "light" : "dark";
