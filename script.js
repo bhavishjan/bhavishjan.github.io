@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
     const body = document.body;
+    const root = document.documentElement;
     const header = document.getElementById("site-header");
     const navToggle = document.querySelector(".nav-toggle");
     const navMenu = document.getElementById("nav-menu");
@@ -14,11 +15,12 @@ document.addEventListener("DOMContentLoaded", () => {
     const applyTheme = (theme) => {
         const isDark = theme === "dark";
         body.classList.toggle("dark-mode", isDark);
+        root.classList.toggle("dark-mode", isDark);
         themeToggle.setAttribute("aria-pressed", String(isDark));
         setupParticles(isDark);
     };
 
-    applyTheme("light");
+    applyTheme("dark");
 
     themeToggle.addEventListener("click", () => {
         const nextTheme = body.classList.contains("dark-mode") ? "light" : "dark";
@@ -70,30 +72,7 @@ document.addEventListener("DOMContentLoaded", () => {
         year.textContent = new Date().getFullYear();
     }
 
-    if (!prefersReducedMotion) {
-        const observer = new IntersectionObserver(
-            (entries) => {
-                entries.forEach((entry) => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add("is-visible");
-                        observer.unobserve(entry.target);
-                    }
-                });
-            },
-            {
-                threshold: 0.18,
-                rootMargin: "0px 0px -40px 0px"
-            }
-        );
-
-        revealItems.forEach((item, index) => {
-            item.style.transitionDelay = `${Math.min(index * 70, 280)}ms`;
-            observer.observe(item);
-        });
-
-    } else {
-        revealItems.forEach((item) => item.classList.add("is-visible"));
-    }
+    revealItems.forEach((item) => item.classList.add("is-visible"));
 });
 
 function setupParticles(isDark) {
